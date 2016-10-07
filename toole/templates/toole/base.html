@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<html>
+<head>
+  <title>TOOLE</title>
+  
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">  
+  <link href="//fonts.googleapis.com/css?family=Century Gothic&subset=latin,latin-ext" rel="stylesheet" type="text/css">  
+  <link href="//fonts.googleapis.com/css?family=PT Sans&subset=latin,latin-ext" rel="stylesheet" type="text/css">   
+  <link rel="stylesheet" href="{% static 'css/toole.css' %}">
+  <link rel="stylesheet" href="{% static 'css/gothic/font.css' %}">
+  <link rel="shortcut icon" href="{% static "img/wheels.png" %}">
+  
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="{% static "jquey/jquery-3.1.1.js" %}"></script>
+  <script src="{% static "jquey/toole.js" %}"></script>
+  <meta name="format-detection" content="telephone=no">
+  
+</head>
+<body>
+
+<header class="main_stuff hidden-xs">
+	<div id="top_page_1">
+		<div id="logo"></div>
+		<div id="empty">
+			{% block content %}
+			<a href="{% url 'base' %}"><p class="button_effect strona black fontsforweb_fontid_9785">STRONA GŁÓWNA</p></a>
+			<a href="{% url 'o_firmie' %}"><p class="button_effect buttons fontsforweb_fontid_9785">O FIRMIE</p></a>
+			<a href="{% url 'oferta' %}"><p class="button_effect buttons fontsforweb_fontid_9785">OFERTA</p></a>
+			<a href="{% url 'realizacje' %}"><p class="button_effect buttons fontsforweb_fontid_9785">REALIZACJE</p></a>
+			<a href="{% url 'kontakt' %}"><p class="button_effect buttons fontsforweb_fontid_9785">KONTAKT</p></a>
+			{% endblock %}
+		</div>
+	</div>
+	<div class="red_string"></div>
+</header>
+<div class="main_stuff_2 hidden-xs">
+	<div id="top_page_2">
+		<div id="title">
+			<p class="title_main fontsforweb_fontid_9785" id="title_size_1">PRODUKCJA</p>
+			<p class="title_main fontsforweb_fontid_9785" id="title_size_2">NARZĘDZI</p>
+			<p class="title_main fontsforweb_fontid_9785" id="title_size_3">NA ZAMÓWIENIE</p>
+		</div>
+		<div id="main_img"></div>
+	</div>
+</div>
+<!--Phone-->
+<div class="phone_content col-xs-12 hidden-sm hidden-md hidden-lg">
+	<img class="img-responsive col-xs-12" src="{% static "img/logo.png" %}" alt="logo"/>
+	<img class="img-responsive col-xs-12" src="{% static "img/sroby.png" %}" alt="sroby"/>
+	<p class="title_main_phone fontsforweb_fontid_9785 col-xs-12">PRODUKCJA NARZĘDZI NA ZAMÓWIENIE</p>
+</div>
+<!--End for Phone-->
+</body>
+</html>

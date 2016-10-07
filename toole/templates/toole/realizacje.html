@@ -1,0 +1,10 @@
+{% extends 'toole/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<a href="{% url 'base' %}"><p class="button_effect strona fontsforweb_fontid_9785">STRONA GŁÓWNA</p></a>
+<a href="{% url 'o_firmie' %}"><p class="button_effect buttons fontsforweb_fontid_9785">O FIRMIE</p></a>
+<a href="{% url 'oferta' %}"><p class="button_effect buttons fontsforweb_fontid_9785">OFERTA</p></a>
+<a href="{% url 'realizacje' %}"><p class="button_effect buttons black fontsforweb_fontid_9785">REALIZACJE</p></a>
+<a href="{% url 'kontakt' %}"><p class="button_effect buttons fontsforweb_fontid_9785">KONTAKT</p></a>
+{% endblock content %}
