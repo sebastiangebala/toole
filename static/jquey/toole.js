@@ -9,3 +9,15 @@ $(document).ready(function() {
 	});
 });
 
+$(document).ready(function() {
+	$('.base_img_2_effect').mouseenter(function() {
+		$(this).addClass("effect_text");
+	});
+});
+$(document).ready(function() {
+	$('.base_img_2_effect').mouseleave(function() {
+		$(this).removeClass("effect_text");	
+	});
+});
+
+

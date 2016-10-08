@@ -20,6 +20,7 @@
   <script src="{% static "jquey/jquery-3.1.1.js" %}"></script>
   <script src="{% static "jquey/toole.js" %}"></script>
   <meta name="format-detection" content="telephone=no">
+  <script src="https://use.fontawesome.com/116e10d08c.js"></script>
   
 </head>
 <body>
@@ -49,11 +50,78 @@
 		<div id="main_img"></div>
 	</div>
 </div>
+
+
+
+<article class="art_holder hidden-xs col-sm-12">
+	<div class="art_inside">
+		{% block article %}
+			<div class="base_img_1 hidden-sm hidden-md"></div>
+			<a href="{% url 'o_firmie' %}"><div class="base_img_2 base_img_2_effect hidden-sm hidden-md img_base_1"><div class="base_text fontsforweb_fontid_9785"><p>O FIRMIE</p></div></div></a>
+			<div class="base_img_3 hidden-sm hidden-md"></div>
+			<a href="{% url 'oferta' %}"><div class="base_img_2 base_img_2_effect hidden-sm hidden-md img_base_2"><div class="base_text fontsforweb_fontid_9785"><p>OFERTA</p></div></div></a>
+			<a href="{% url 'realizacje' %}"><div class="base_img_2 base_img_2_effect hidden-sm hidden-md img_base_3"><div class="base_text fontsforweb_fontid_9785"><p>REALIZACJE</p></div></div></a>
+			<a href="{% url 'kontakt' %}"><div class="base_img_2 base_img_2_effect hidden-sm hidden-md img_base_4"><div class="base_text fontsforweb_fontid_9785"><p>KONTAKT</p></div></div></a>
+		
+			<div class="base_img_1 hidden-lg"></div>
+			<a href="{% url 'o_firmie' %}"><div class="base_img_2 hidden-lg img_base_1"><div class="base_text fontsforweb_fontid_9785"><p>O FIRMIE</p></div></div></a>
+			<div class="base_img_3 hidden-lg "></div>
+			<a href="{% url 'oferta' %}"><div class="base_img_2 hidden-lg img_base_2"><div class="base_text fontsforweb_fontid_9785"><p>OFERTA</p></div></div></a>
+			<a href="{% url 'realizacje' %}"><div class="base_img_2 hidden-lg img_base_3"><div class="base_text fontsforweb_fontid_9785"><p>REALIZACJE</p></div></div></a>
+			<a href="{% url 'kontakt' %}"><div class="base_img_2 hidden-lg img_base_4"><div class="base_text fontsforweb_fontid_9785"><p>KONTAKT</p></div></div></a>
+		{% endblock %}
+	</div>
+</article>
+<footer class="hidden-xs col-sm-12">
+	{% block footer %}
+	<div class="footer_inside fontsforweb_fontid_9785">
+		Realizując plan rozwoju naszej firmy, mamy zaszczyt zaprezentować Państwu naszą bogatą ofertę usługowo - produkcyjną, którą w przyszłości będziemy nieustannie poszerzać. Jesteśmy przekonani, że zarówno proponowana przez nas obróbka metali skrawaniem, jak i wszystkie produkty sprostają Państwa oczekiwaniom.	
+	</div>
+	{% endblock %}
+</footer>
+<div class="end hidden-xs col-sm-12">
+	<div class="end_inside">
+		<i class="fa fa-copyright footer-i" aria-hidden="true"></i>
+		Copyright TOOLE sp. z o.o.</br>97-357 Łódź</br>ul. Liściasta 17</br>
+		<i class="fa fa-paint-brush footer-i" aria-hidden="true"></i> 
+		Made by: <a href="http://www.sebastiangebala.com/" target="_blank">sebastiangebala.com </a>
+	</div>
+</div>
+
+
+
+
 <!--Phone-->
 <div class="phone_content col-xs-12 hidden-sm hidden-md hidden-lg">
 	<img class="img-responsive col-xs-12" src="{% static "img/logo.png" %}" alt="logo"/>
 	<img class="img-responsive col-xs-12" src="{% static "img/sroby.png" %}" alt="sroby"/>
 	<p class="title_main_phone fontsforweb_fontid_9785 col-xs-12">PRODUKCJA NARZĘDZI NA ZAMÓWIENIE</p>
+</div>
+
+<article class="art_holder_phone col-xs-12 hidden-sm hidden-md hidden-lg">
+	<div class="art_inside_phone col-xs-12">
+		{% block content_phone %}
+		<a href="{% url 'o_firmie' %}"><div class="base_img_2_phone col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/hand.jpg" %}" alt="machine"/><div class="base_text_phone fontsforweb_fontid_9785"><p>O FIRMIE</p></div></div></a>
+		<a href="{% url 'oferta' %}"><div class="base_img_2_phone col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/machine_2.jpg" %}" alt="machine"/><div class="base_text_phone fontsforweb_fontid_9785"><p>OFERTA</p></div></div></a>
+		<a href="{% url 'realizacje' %}"><div class="base_img_2_phone col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/walec.jpg" %}" alt="machine"/><div class="base_text_phone fontsforweb_fontid_9785"><p>REALIZACJE</p></div></div></a>
+		<a href="{% url 'kontakt' %}"><div class="base_img_2_phone col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/filtr.jpg" %}" alt="machine"/><div class="base_text_phone col-sx-12 fontsforweb_fontid_9785"><p>KONTAKT</p></div></div></a>		
+		{% endblock %}
+	</div>
+</article>
+<footer class="col-xs-12 hidden-sm hidden-md hidden-lg">
+	{% block footer_phone %}
+	<div class="footer_inside_phone fontsforweb_fontid_9785">	
+		Realizując plan rozwoju naszej firmy, mamy zaszczyt zaprezentować Państwu naszą bogatą ofertę usługowo - produkcyjną, którą w przyszłości będziemy nieustannie poszerzać. Jesteśmy przekonani, że zarówno proponowana przez nas obróbka metali skrawaniem, jak i wszystkie produkty sprostają Państwa oczekiwaniom.	
+	</div>
+	{% endblock %}
+</footer>
+<div class="end_phone col-xs-12 hidden-sm hidden-md hidden-lg">
+	<div class="end_inside_phone">
+		<i class="fa fa-copyright footer-i" aria-hidden="true"></i>
+		Copyright TOOLE sp. z o.o.</br>97-357 Łódź</br>ul. Liściasta 17</br>
+		<i class="fa fa-paint-brush footer-i" aria-hidden="true"></i> 
+		Made by: <a href="http://www.sebastiangebala.com/" target="_blank">sebastiangebala.com </a>
+	</div>
 </div>
 <!--End for Phone-->
 </body>

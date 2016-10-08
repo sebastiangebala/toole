@@ -1,6 +1,19 @@
 {
 border: 1px solid red;
 }
+a:hover {
+color: #4A4A4A;
+text-decoration: none;
+}
+a:link {
+outline:none;
+text-decoration: none;
+}
+a:visited {
+color: #4A4A4A;
+text-decoration: none;
+}
+
 .main_stuff {height: 80px; width: 100%;}
 .main_stuff_2 {height: 240px; width: 100%; background-color: #161916; border-bottom: 6px solid #FA0A17;}
 #top_page_1 {width: 1050px; height: 80px; margin: auto;}
@@ -32,6 +45,35 @@ border-bottom: 6px solid #FA0A17;
 .effect {background: #161916; color: white;}
 .black {background: #161916; color: white;}
 
+.art_holder {width: 100%;}
+.art_inside {width: 1050px;  margin: auto; background: #161916; min-height: 500px;}
+footer {width: 100%; background: #FA0A17;}
+.footer_inside {width: 1050px; margin: auto; font-size: 18px; padding-top: 20px; padding-bottom: 20px; padding-left: 15px; color: black;}
+.footer_font {text-align: center; font-size: 25px;}
+.end {width: 100%;}
+.end_inside {width: 1050px; margin: auto; background: #161916; text-align: center; padding-top: 20px; padding-bottom: 20px; color: #4A4A4A;}
+
+.base_img_1 {width: 300px; height: 465px; float: left; background-image: url('../img/machine.jpg'); background-size: 100% 100%; margin-left: 15px; margin-top: 15px}
+.base_img_2 {position: relative; width: 225px; height: 225px; float: left; margin-left: 15px; margin-top: 15px}
+.base_img_3 {width: 465px; height: 225px; float: left; background-image: url('../img/mazak.jpg'); background-size: 100% 100%; margin-left: 15px; margin-top: 15px}
+.base_text {position: absolute; bottom: 0; width: 100%; height: 50px; background: #FA0A17;}
+.base_text p {text-align: right; padding-right: 10px; padding-top: 5px; font-size: 25px; font-weight: bold; color: black;}
+.effect_text {filter:saturate(8); margin-top: 10px; margin-left: 10px; margin-right: -5px; margin-bottom: -5px; width: 235px; height: 235px;}
+.img_base_1 {background-image: url('../img/hand.jpg'); background-size: 100% 100%;}
+.img_base_2 {background-image: url('../img/machine_2.jpg'); background-size: 100% 100%;}
+.img_base_3 {background-image: url('../img/walec.jpg'); background-size: 100% 100%;}
+.img_base_4 {background-image: url('../img/filtr.jpg'); background-size: 100% 100%;}
+
+/*o firmie*/
+.firma_img {float: left; width: 500px;}
+.firma_text {color: white; font-size: 18px; padding: 20px;}
+
+/*oferta*/
+.oferta_empty {float: left; width: 250px; height: 700px; background: #161916;}
+.oferta_holder {float: left; width: 800px; color: white; font-size: 15px; height: 700px; background: #161916;}
+.first_letter {display: inline; background: #FA0A17; padding-left: 40px; text-align: right; line-height: 40px;}
+.oferta_text {display: inline; line-height: 40px;}
+
 /*small Desktop*/
 @media (min-width: 992px) and (max-width: 1200px) {
 .main_stuff {height: 60px;}
@@ -48,6 +90,14 @@ border-bottom: 6px solid #FA0A17;
 #main_img {width: 700px; height: 200px;}
 .strona {width: 180px; height: 35px; margin-top: 52px; font-size: 17px; padding-top: 5px;}
 .buttons {width: 130px; height: 35px; margin-top: 52px; font-size: 17px; padding-top: 5px;}
+.art_inside {width: 900px;}
+.footer_inside {width: 900px;}
+.end_inside {width: 900px;}
+.base_img_1 {width: 260px; height: 395px;}
+.base_img_2 {width: 189px; height: 189px;}
+.base_img_3 {width: 393px; height: 189px;}
+.oferta_empty {width: 200px;}
+.oferta_holder {width: 700px;}
 }
 /*iPad*/
 @media (min-width: 768px) and (max-width: 992px) {
@@ -65,6 +115,16 @@ border-bottom: 6px solid #FA0A17;
 #main_img {width: 580px; height: 180px;}
 .strona {width: 160px; height: 30px; margin-top: 47px; font-size: 15px; padding-top: 4px;}
 .buttons {width: 105px; height: 30px; margin-top: 47px; font-size: 15px; padding-top: 4px;}
+.art_inside {width: 760px;}
+.footer_inside {width: 760px;}
+.end_inside {width: 760px;}
+.base_img_1 {width: 225px; height: 345px; margin-left: 5px; margin-top: 5px}
+.base_img_2 {width: 170px; height: 170px; margin-left: 5px; margin-top: 5px}
+.base_img_3 {width: 345px; height: 170px; margin-left: 5px; margin-top: 5px}
+.firma_img {width: 380px;}
+.firma_text {font-size: 15px; padding: 15px;}
+.oferta_empty {width: 180px; height: 800px;}
+.oferta_holder {width: 580px; height: 800px;}
 }
 /*iPhone*/
 @media only screen and (min-width: 768px) {
@@ -79,4 +139,20 @@ color: white;
 background: #161916;
 font-weight: bold;
 border-bottom: 6px solid #FA0A17;
+margin-bottom: 0px;
 }
+
+.art_holder_phone {padding: 0px;}
+.art_inside_phone {background: #161916;}
+footer {background: #FA0A17;}
+.footer_inside_phone {font-size: 18px; padding-top: 20px; padding-bottom: 20px;}
+.end_phone {padding: 0px;}
+.end_inside_phone {height: 100px; background: #161916; width: 100%; text-align: center; padding-top: 10px; padding-bottom: 10px; color: #4A4A4A;}
+.base_img_2_phone {margin-bottom: 15px; width: 100%; padding-left: 0px; padding-right: 0px;}
+.base_text_phone {position:absolute; right: 0; bottom: 0; height: 50px; background: #FA0A17; width: 100%}
+.base_text_phone p {font-size: 25px; font-weight: bold; color: black; padding-right: 15px; padding-top: 5px; text-align: right;}
+.phone_img {margin-left: 0px; padding-left: 0px; padding-right: 0px; width: 100%;}
+.firma_text_phone {color: white; font-size: 15px; padding: 15px;}
+.oferta_holder_phone {width: 100%; height: 100%; float: left; color: white; font-size: 15px; background: #161916;}
+.first_letter_phone {display: inline; background: #FA0A17; padding-left: 40px; text-align: right; line-height: 40px;}
+.oferta_text_phone {display: inline; line-height: 40px;}

@@ -8,3 +8,48 @@
 <a href="{% url 'realizacje' %}"><p class="button_effect buttons fontsforweb_fontid_9785">REALIZACJE</p></a>
 <a href="{% url 'kontakt' %}"><p class="button_effect buttons fontsforweb_fontid_9785">KONTAKT</p></a>
 {% endblock content %}
+
+{% block article %}
+<div class="firma_img">
+	<img class="img-responsive" src="{% static "img/zielona.png" %}" alt="zielona"/>
+</div>
+<div class="firma_text fontsforweb_fontid_9785">
+<h3><b>O FIRMIE</b></h3></br>
+<b>Narzędziownia TOOLE</b> została wyodrębniona z Fabryki Pierścieni Tłokowych <b>PRIMA</b>.
+W początkowej fazie działalności specjalizowała się ona 
+w produkcji narzędzi i oprzyrządowania  wykorzystywanego w produkcji pierścieni tłokowych. Nieustannie zmieniające się potrzeby rynku w efekcie doprowadziły do wyodrębnie-nia działu, oferującego obróbkę metali skrawaniem, w tym toczenie  CNC, frezowanie, drążenie, wypalanie plazmowe, laserowe oraz wodne, a także produkcję najwyższej jakości oprzyrządowania technologicznego.
+</br></br>Stale inwestujemy w park maszynowy oraz w podnoszenie kwalifikacji pracowników.
+Posiadamy wykwalifikowany personel inżynierów, konstruktorów oraz techników z bogatym doświadczeniem z za-kresu obsługi maszyn i urządzeń.
+Dysponujemy dostępem do laboratorium pomiarowego.
+</div>
+{% endblock article %}
+
+
+{% block footer %}
+	<div class="footer_inside footer_font fontsforweb_fontid_9785">
+		PROFESJONALNE NARZĘDZIE DOSTOSOWANE DO TWOICH POTRZEB
+	</div>
+{% endblock footer %}
+
+<!--Phone-->
+{% block content_phone %}
+<div class="firma_img_phone col-xs-12">
+<img class="img-responsive" src="{% static "img/zielona.png" %}" alt="zielona"/>
+</div>
+<div class="firma_text_phone fontsforweb_fontid_9785">
+<h3><b>O FIRMIE</b></h3></br>
+<b>Narzędziownia TOOLE</b> została wyodrębniona z Fabryki Pierścieni Tłokowych <b>PRIMA</b>.
+W początkowej fazie działalności specjalizowała się ona 
+w produkcji narzędzi i oprzyrządowania  wykorzystywanego w produkcji pierścieni tłokowych. Nieustannie zmieniające się potrzeby rynku w efekcie doprowadziły do wyodrębnie-nia działu, oferującego obróbkę metali skrawaniem, w tym toczenie  CNC, frezowanie, drążenie, wypalanie plazmowe, laserowe oraz wodne, a także produkcję najwyższej jakości oprzyrządowania technologicznego.
+</br></br>Stale inwestujemy w park maszynowy oraz w podnoszenie kwalifikacji pracowników.
+Posiadamy wykwalifikowany personel inżynierów, konstruktorów oraz techników z bogatym doświadczeniem z za-kresu obsługi maszyn i urządzeń.
+Dysponujemy dostępem do laboratorium pomiarowego.
+</div>
+{% endblock content_phone %}
+
+{% block footer_phone %}
+	<div class="footer_inside_phone footer_font fontsforweb_fontid_9785">
+		PROFESJONALNE NARZĘDZIE DOSTOSOWANE DO TWOICH POTRZEB
+	</div>
+{% endblock footer_phone %}
+<!--End for Phone-->
