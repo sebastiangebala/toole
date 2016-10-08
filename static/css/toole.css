@@ -146,15 +146,16 @@ margin-bottom: 0px;
 .art_holder_phone {padding: 0px;}
 .art_inside_phone {background: #161916;}
 footer {background: #FA0A17;}
-.footer_inside_phone {font-size: 18px; padding-top: 20px; padding-bottom: 20px;}
+.footer_inside_phone {font-size: 15px; padding-top: 20px; padding-bottom: 20px; padding-left: 5%; padding-right: 5%; text-align: justify;}
 .end_phone {padding: 0px;}
 .end_inside_phone {height: 100px; background: #161916; width: 100%; text-align: center; padding-top: 10px; padding-bottom: 10px; color: #4A4A4A;}
-.base_img_2_phone {margin-bottom: 15px; width: 100%; padding-left: 10%; padding-right: 10%;}
+.base_img_2_phone {margin-bottom: 15px; width: 100%; padding-left: 5%; padding-right: 5%;}
 .base_img_2_phone_top {padding-top: 15px;}
-.base_text_phone {position:absolute; bottom: 0; height: 50px; background: #FA0A17; width: 80%; padding-left: 10%; padding-right: 10%;}
-.base_text_phone p {font-size: 25px; font-weight: bold; color: black; padding-right: 15px; padding-top: 5px; text-align: right;}
+.base_text_phone {position:absolute; bottom: 0; height: 50px; background: #FA0A17; width: 90%; padding-left: 5%; padding-right: 5%;}
+.base_text_phone p {font-size: 25px; font-weight: bold; color: black; padding-right: 5px; padding-top: 5px; text-align: right;}
 .phone_img {margin-left: 0px; padding-left: 0px; padding-right: 0px; width: 100%;}
 .firma_text_phone {color: white; font-size: 15px; padding: 15px;}
+.firma_img_phone {padding-bottom: 30px;}
 .oferta_holder_phone {width: 100%; height: 100%; float: left; color: white; font-size: 15px; background: #161916;}
 .first_letter_phone {display: inline; background: #FA0A17; padding-left: 40px; text-align: right; line-height: 40px;}
 .oferta_text_phone {display: inline; line-height: 40px;}
