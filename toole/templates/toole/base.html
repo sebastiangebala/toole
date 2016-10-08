@@ -27,7 +27,7 @@
 
 <header class="main_stuff hidden-xs">
 	<div id="top_page_1">
-		<div id="logo"></div>
+		<a href="{% url 'base' %}"><div id="logo"></div></a>
 		<div id="empty">
 			{% block content %}
 			<a href="{% url 'base' %}"><p class="button_effect strona black fontsforweb_fontid_9785">STRONA GŁÓWNA</p></a>
@@ -93,7 +93,7 @@
 
 <!--Phone-->
 <div class="phone_content col-xs-12 hidden-sm hidden-md hidden-lg">
-	<img class="img-responsive col-xs-12" src="{% static "img/logo.png" %}" alt="logo"/>
+	<a href="{% url 'base' %}"><img class="img-responsive col-xs-12" src="{% static "img/logo.png" %}" alt="logo"/></a>
 	<img class="img-responsive col-xs-12" src="{% static "img/sroby.png" %}" alt="sroby"/>
 	<p class="title_main_phone fontsforweb_fontid_9785 col-xs-12">PRODUKCJA NARZĘDZI NA ZAMÓWIENIE</p>
 </div>
@@ -101,10 +101,10 @@
 <article class="art_holder_phone col-xs-12 hidden-sm hidden-md hidden-lg">
 	<div class="art_inside_phone col-xs-12">
 		{% block content_phone %}
-		<a href="{% url 'o_firmie' %}"><div class="base_img_2_phone col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/hand.jpg" %}" alt="machine"/><div class="base_text_phone fontsforweb_fontid_9785"><p>O FIRMIE</p></div></div></a>
-		<a href="{% url 'oferta' %}"><div class="base_img_2_phone col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/machine_2.jpg" %}" alt="machine"/><div class="base_text_phone fontsforweb_fontid_9785"><p>OFERTA</p></div></div></a>
-		<a href="{% url 'realizacje' %}"><div class="base_img_2_phone col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/walec.jpg" %}" alt="machine"/><div class="base_text_phone fontsforweb_fontid_9785"><p>REALIZACJE</p></div></div></a>
-		<a href="{% url 'kontakt' %}"><div class="base_img_2_phone col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/filtr.jpg" %}" alt="machine"/><div class="base_text_phone col-sx-12 fontsforweb_fontid_9785"><p>KONTAKT</p></div></div></a>		
+		<a href="{% url 'o_firmie' %}"><div class="base_img_2_phone base_img_2_phone_top col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/hand_phone.jpg" %}" alt="machine"/><div class="base_text_phone fontsforweb_fontid_9785"><p>O FIRMIE</p></div></div></a>
+		<a href="{% url 'oferta' %}"><div class="base_img_2_phone col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/machine_2_phone.jpg" %}" alt="machine"/><div class="base_text_phone fontsforweb_fontid_9785"><p>OFERTA</p></div></div></a>
+		<a href="{% url 'realizacje' %}"><div class="base_img_2_phone col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/walec_phone.jpg" %}" alt="machine"/><div class="base_text_phone fontsforweb_fontid_9785"><p>REALIZACJE</p></div></div></a>
+		<a href="{% url 'kontakt' %}"><div class="base_img_2_phone col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/filtr_phone.jpg" %}" alt="machine"/><div class="base_text_phone col-sx-12 fontsforweb_fontid_9785"><p>KONTAKT</p></div></div></a>		
 		{% endblock %}
 	</div>
 </article>
@@ -120,7 +120,7 @@
 		<i class="fa fa-copyright footer-i" aria-hidden="true"></i>
 		Copyright TOOLE sp. z o.o.</br>97-357 Łódź</br>ul. Liściasta 17</br>
 		<i class="fa fa-paint-brush footer-i" aria-hidden="true"></i> 
-		Made by: <a href="http://www.sebastiangebala.com/" target="_blank">sebastiangebala.com </a>
+		Made by: <a class="link_phone" href="http://www.sebastiangebala.com/" target="_blank">sebastiangebala.com </a>
 	</div>
 </div>
 <!--End for Phone-->
