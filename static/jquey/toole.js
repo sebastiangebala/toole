@@ -20,4 +20,13 @@ $(document).ready(function() {
 	});
 });
 
-
+$(document).ready(function() {
+	$('.base_img_2_realiz').mouseenter(function() {
+		$(this).addClass("effect_text_realiz");
+	});
+});
+$(document).ready(function() {
+	$('.base_img_2_realiz').mouseleave(function() {
+		$(this).removeClass("effect_text_realiz");	
+	});
+});

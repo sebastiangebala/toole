@@ -1,0 +1,46 @@
+{% extends 'toole/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<a href="{% url 'base' %}"><p class="button_effect strona fontsforweb_fontid_9785">STRONA GŁÓWNA</p></a>
+<a href="{% url 'o_firmie' %}"><p class="button_effect buttons fontsforweb_fontid_9785">O FIRMIE</p></a>
+<a href="{% url 'oferta' %}"><p class="button_effect buttons fontsforweb_fontid_9785">OFERTA</p></a>
+<a href="{% url 'realizacje' %}"><p class="button_effect buttons fontsforweb_fontid_9785">REALIZACJE</p></a>
+<a href="{% url 'kontakt' %}"><p class="button_effect buttons fontsforweb_fontid_9785">KONTAKT</p></a>
+{% endblock content %}
+
+{% block article %}
+		{% if user.is_authenticated %}
+		<a href="{% url 'produkt_edit' pk=produkt.pk %}"><i class="fa fa-pencil-square-o fa-3x edit" aria-hidden="true"></i></a>
+		<a href="{% url 'produkt_remove' pk=produkt.pk %}"><i class="fa fa-trash fa-3x edit" aria-hidden="true"></i></a>
+		{% endif %}
+		{% if produkt.image %}
+		<img class="img_detail" src="{{ produkt.image.url }}"/>
+		{% endif %}
+		<h1 class="title_detail fontsforweb_fontid_9785">{{ produkt.title }}</h1>
+		<p class="text_detail fontsforweb_fontid_9785">{{ produkt.text }}</p>
+
+{% endblock article %}
+
+{% block footer %}
+	<div class="footer_inside footer_font fontsforweb_fontid_9785">
+		PROFESJONALNE NARZĘDZIA DOSTOSOWANE DO TWOICH POTRZEB
+	</div>
+{% endblock footer %}
+
+<!--Phone-->
+{% block content_phone %}
+	{% if produkt.image %}
+	<img class="img_detail_phone" src="{{ produkt.image.url }}"/>
+	{% endif %}
+	<h1 class="title_detail_phone fontsforweb_fontid_9785">{{ produkt.title }}</h1>
+	<p class="text_detail_phone fontsforweb_fontid_9785">{{ produkt.text }}</p>
+		
+{% endblock content_phone %}
+
+{% block footer_phone %}
+	<div class="footer_inside_phone footer_font fontsforweb_fontid_9785">
+		PROFESJONALNE NARZĘDZIA DOSTOSOWANE DO TWOICH POTRZEB
+	</div>
+{% endblock footer_phone %}
+<!--End for Phone-->

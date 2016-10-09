@@ -11,6 +11,35 @@
 
 {% block article %}
 
+	{% if user.is_authenticated %}
+	<a href="{% url 'produkt_new' %}">
+		<i class="fa fa-pencil fa-3x" aria-hidden="true"></i>
+	</a>
+	{% endif %}
+
+
+	{% for produkt in produkts %}		
+			<a href="{% url 'produkt_detail' pk=produkt.pk %}">
+				<div class="base_img_2_realiz hidden-sm hidden-md">
+					{% if produkt.image %}
+					<img class="img_realiz" src="{{ produkt.image.url }}"/>
+					{% endif %}
+					<div class="base_text_realiz fontsforweb_fontid_9785"><p>{{ produkt.title }}</p></div>
+				</div>
+			</a>
+			<a href="{% url 'produkt_detail' pk=produkt.pk %}">
+				<div class="base_img_2_realiz_small hidden-lg">
+					{% if produkt.image %}
+					<img class="img_realiz" src="{{ produkt.image.url }}"/>
+					{% endif %}
+					<div class="base_text_realiz fontsforweb_fontid_9785"><p>{{ produkt.title }}</p></div>
+				</div>
+			</a>
+		
+	{% endfor %}
+
+
+
 {% endblock article %}
 
 {% block footer %}
@@ -21,7 +50,16 @@
 
 <!--Phone-->
 {% block content_phone %}
-	content
+	{% for produkt in produkts %}
+			<a href="{% url 'produkt_detail' pk=produkt.pk %}">
+				<div class="base_img_2_realiz_phone col-xs-12">
+					{% if produkt.image %}
+					<img class="img_realiz_phone" src="{{ produkt.image.url }}"/>
+					{% endif %}
+					<div class="base_text_realiz_phone fontsforweb_fontid_9785"><p>{{ produkt.title }}</p></div>
+				</div>
+			</a>
+	{% endfor %}
 {% endblock content_phone %}
 
 {% block footer_phone %}
