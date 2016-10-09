@@ -42,4 +42,4 @@ def produkt_edit(request, pk):
 def produkt_remove(request, pk):
     produkt = get_object_or_404(Produkt, pk=pk)
     produkt.delete()
-    return redirect('toole.views.realizacje')
+    return redirect('realizacje')
