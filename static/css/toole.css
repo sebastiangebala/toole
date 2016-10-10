@@ -40,7 +40,7 @@ background-size: 100% 100%;
 .black {background: #161916; color: white;}
 
 .art_holder {width: 100%; padding-left: 0px; padding-right: 0px;}
-.art_inside {width: 1050px;  margin-left: auto; margin-right: auto; background: #161916; height: 500px;}
+.art_inside {width: 1050px; margin: auto; padding-bottom: 15px; background: #161916; display: table;}
 footer {width: 100%; background: #FA0A17;}
 .footer_inside {width: 1050px; margin: auto; font-size: 18px; padding-top: 20px; padding-bottom: 20px; padding-left: 15px; color: black;}
 .footer_font {text-align: center; font-size: 25px;}
@@ -74,7 +74,7 @@ footer {width: 100%; background: #FA0A17;}
 .base_text_realiz {position: absolute; bottom: 0; width: 100%; background: #FA0A17;}
 .base_text_realiz p {text-align: right; padding-right: 10px; padding-top: 5px; font-size: 25px; font-weight: bold; color: black;}
 .effect_text_realiz {filter:saturate(8); margin-top: 10px; margin-left: 10px; margin-right: -5px; margin-bottom: -5px; width: 254px; height: 254px;}
-.fa-pencil {width: 100%; color: blue; padding-left: 20px; padding-top: 20px;}
+.fa-pencil {width: 100%; color: yellow; padding-left: 20px; padding-top: 20px;}
 
 /*produkt_detail*/
 .img_detail {float: left; margin-left: 15px; margin-top: 15px; width: 45%;}
@@ -82,12 +82,22 @@ footer {width: 100%; background: #FA0A17;}
 .text_detail {float: left; color: white; margin-left: 15px; margin-top: 15px; width: 45%;}
 
 /*produkt_new*/
-h1 {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: blue}
-form {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: blue}
-.btn-default {color: blue}
+h1 {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: red}
+form {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: red}
+.btn-default {color: black}
 
 /*product_detail*/
-.edit {margin-left: 15px; margin-top: 15px; color: blue}
+.edit {margin-left: 15px; margin-top: 15px; color: yellow}
+
+/*kontakt*/
+.kontakt_1 {width: 350px; float: left; padding: 20px; color: white; font-size: 25px; font-weight: bold;}
+.kontakt_2 {width: 700px; float: left; padding: 20px; color: white; font-size: 15px; font-weight: bold;}
+.kontakt_title {text-align: center; font-size: 25px; padding-bottom: 20px;}
+.kontakt_dane_1 {float: left; text-align: center; padding-left: 50px;}
+.kontakt_dane_2 {float: right; text-align: center; padding-right: 50px;}
+.kontakt_adres {font-size: 15px; float: right;}
+.kontakt_kto {border-bottom: 2px solid red; margin-bottom: 10px;}
+.kontakt_img {width: 450px; margin-left: -150px !important;}
 
 /*small Desktop*/
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -115,6 +125,8 @@ form {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: blue
 .oferta_holder {width: 700px;}
 .base_img_2_realiz_small {position: relative; width: 206px; height: 206px; float: left; margin-left: 15px; margin-top: 15px;}
 .base_text_realiz p {font-size: 20px;}
+.kontakt_1 {width: 300px;}
+.kontakt_2 {width: 600px;}
 }
 /*iPad*/
 @media (min-width: 768px) and (max-width: 992px) {
@@ -144,6 +156,12 @@ form {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: blue
 .oferta_holder {width: 580px; height: 800px;}
 .base_img_2_realiz_small {position: relative; width: 172px; height: 172px; float: left; margin-left: 15px; margin-top: 15px;}
 .base_text_realiz p {font-size: 18px;}
+.kontakt_1 {width: 250px; padding: 10px; font-size: 20px;}
+.kontakt_2 {width: 510px; padding: 10px; font-size: 12px;}
+.kontakt_title {font-size: 20px; padding-bottom: 20px;}
+.kontakt_dane_1 {padding-left: 30px;}
+.kontakt_dane_2 {padding-right: 30px;}
+.kontakt_adres {font-size: 12px;}
 }
 /*iPhone*/
 @media only screen and (min-width: 768px) {
@@ -185,3 +203,7 @@ footer {background: #FA0A17;}
 .img_detail_phone {margin-top: 15px; width: 100%; padding-left: 5%; padding-right: 5%;}
 .title_detail_phone {margin-top: 15px; width: 100%; padding-left: 5%; padding-right: 5%; color: white}
 .text_detail_phone {margin-top: 15px; width: 100%; padding-left: 5%; padding-right: 5%; color: white}
+.kontakt_phone {text-align: center; font-size: 15px; color: white; padding-bottom: 10px; padding-top: 10px; font-weight: bold;}
+.kontakt_title_phone {font-size: 25px;}
+.kontakt_detail_phone {margin-bottom: 30px;}
+.kontakt_kto_phone {border-bottom: 2px solid red; margin-bottom: 10px; margin-left: 20%; margin-right: 20%;}
