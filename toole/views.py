@@ -1,8 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Produkt
 from django.shortcuts import render, get_object_or_404
-from .forms import ProduktForm
-from django.shortcuts import redirect
+from .forms import ProduktForm, ContactForm
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse, HttpResponseRedirect
+from django.conf import settings
+
 
 def base(request):
     return render(request, 'toole/base.html', {})
@@ -17,7 +20,24 @@ def produkt_detail(request, pk):
 	produkt = get_object_or_404(Produkt, pk=pk)
 	return render(request, 'toole/produkt_detail.html', {'produkt': produkt})
 def kontakt(request):
-    return render(request, 'toole/kontakt.html', {})
+	if request.method == 'GET':
+		form = ContactForm()
+	else:
+		form = ContactForm(request.POST)
+		if form.is_valid():
+			subject = form.cleaned_data['subject']
+			from_email = form.cleaned_data['from_email']
+			message = form.cleaned_data['message']
+			try:
+				send_mail(subject, message, from_email, ['sebastian.gebala@gmail.com'])
+			except BadHeaderError:
+				return HttpResponse('Invalid header found.')
+			return redirect('thanks')
+	return render(request, "toole/kontakt.html", {'form': form})
+
+def thanks(request):
+    return HttpResponse('Thank you for your message.')
+    
 def produkt_new(request):
     if request.method == "POST":
         form = ProduktForm(request.POST or None, request.FILES or None)
@@ -43,3 +63,4 @@ def produkt_remove(request, pk):
     produkt = get_object_or_404(Produkt, pk=pk)
     produkt.delete()
     return redirect('realizacje')
+

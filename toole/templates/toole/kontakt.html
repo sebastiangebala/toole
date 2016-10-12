@@ -28,6 +28,15 @@
 	</div>
 	<div class="kontakt_2 fontsforweb_fontid_9785">
 		<p class="kontakt_title">NAPISZ DO NAS</p>
+		
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
+		
 	</div>
 {% endblock article %}
 

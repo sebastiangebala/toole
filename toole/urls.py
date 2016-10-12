@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.conf.urls import patterns, url
 from . import views
 
 urlpatterns = [
@@ -11,4 +11,5 @@ urlpatterns = [
 	url(r'^produkt/new/$', views.produkt_new, name='produkt_new'),
 	url(r'^produkt/(?P<pk>[0-9]+)/edit/$', views.produkt_edit, name='produkt_edit'),
 	url(r'^produkt/(?P<pk>\d+)/remove/$', views.produkt_remove, name='produkt_remove'),
+	url(r'^thanks/$', views.thanks, name='thanks'),
 ]
