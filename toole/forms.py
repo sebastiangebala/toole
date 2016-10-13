@@ -10,7 +10,6 @@ class ProduktForm(forms.ModelForm):
 		fields = ('title', 'text', 'image')
 
 class ContactForm(forms.Form):
-
-    from_email = forms.EmailField(required=True)
-    subject = forms.CharField(required=True)
-    message = forms.CharField(widget=forms.Textarea)
+	subject = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Tytuł'}))
+	message = forms.CharField(widget=forms.Textarea(attrs={'placeholder': 'Twoja wiadomość'}))
+	from_email = forms.EmailField(required=True, widget=forms.TextInput(attrs={'placeholder': 'Twój e-mail'}))

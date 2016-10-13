@@ -7,6 +7,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.conf import settings
 
 
+
 def base(request):
     return render(request, 'toole/base.html', {})
 def o_firmie(request):
@@ -28,15 +29,17 @@ def kontakt(request):
 			subject = form.cleaned_data['subject']
 			from_email = form.cleaned_data['from_email']
 			message = form.cleaned_data['message']
+			recipients = form.cleaned_data['from_email']
 			try:
+				send_mail(subject, message, from_email, [recipients])
 				send_mail(subject, message, from_email, ['sebastian.gebala@gmail.com'])
 			except BadHeaderError:
 				return HttpResponse('Invalid header found.')
 			return redirect('thanks')
 	return render(request, "toole/kontakt.html", {'form': form})
-
+	
 def thanks(request):
-    return HttpResponse('Thank you for your message.')
+    return render(request, "toole/thanks.html", {'thanks': thanks})
     
 def produkt_new(request):
     if request.method == "POST":

@@ -98,6 +98,10 @@ form {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: red}
 .kontakt_adres {font-size: 15px; float: right;}
 .kontakt_kto {border-bottom: 2px solid red; margin-bottom: 10px;}
 .kontakt_img {width: 450px; margin-left: -150px !important;}
+#email {float: left; padding-left: 100px}
+#subject {float: right; padding-right: 100px}
+#message {text-align: center; padding-top: 20px; float: right; padding-right: 100px}
+.form-actions {float: left; margin-left: 50px; position: absolute; bottom: 40px; margin-left: 0px;}
 
 /*small Desktop*/
 @media (min-width: 992px) and (max-width: 1200px) {
