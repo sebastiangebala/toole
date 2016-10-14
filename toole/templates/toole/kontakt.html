@@ -28,20 +28,18 @@
 	</div>
 	<div class="kontakt_2 fontsforweb_fontid_9785">
 		<p class="kontakt_title">NAPISZ DO NAS</p>
-		
-
-
-<form id="action="" method="post">
-	{% csrf_token %}
-    <div class="contactList">
-		<div id="email" class="contact">{{ form.from_email }}</div>
-        <div id="subject" class="contact">{{ form.subject }}</div>
-        <div id="message" class="contact">{{ form.message }}</div>
-    </div>
-    <div class="form-actions">
-      <button type="submit">Wyślij wiadomość</button>
-    </div>
-</form>
+		<form id="action="" method="post">
+			{% csrf_token %}
+			<div class="contactList">
+				<div id="email" class="contact">{{ form.from_email }}</div>
+				<div id="subject" class="contact">{{ form.subject }}</div>
+				<div id="name" class="contact">{{ form.name }}</div>
+				<div id="message" class="contact">{{ form.message }}</div>
+			</div>
+			<div class="form-actions">
+				<button type="submit">Wyślij wiadomość</button>
+			</div>
+		</form>
 		
 	</div>
 {% endblock article %}
@@ -72,6 +70,21 @@
 	</div>
 	<div class="kontakt_phone fontsforweb_fontid_9785">
 		<p class="kontakt_title_phone">NAPISZ DO NAS</p>
+		
+		<form class="form_message" id="action="" method="post">
+			{% csrf_token %}
+			<div class="contactList_phone">
+				<div id="email_phone" class="col-xs-12 contact_phone">{{ form.from_email }}</div>
+				<div id="subject_phone" class="col-xs-12 contact_phone">{{ form.subject }}</div>
+				<div id="name_phone" class="col-xs-12 contact_phone">{{ form.name }}</div>
+				<div id="message_phone" class="col-xs-12 contact_phone">{{ form.message }}</div>
+			</div>
+			<div class="form_actions_phone">
+				<button type="submit">Wyślij wiadomość</button>
+			</div>
+		</form>
+		
+		
 	</div>
 {% endblock content_phone %}
 
