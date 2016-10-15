@@ -30,3 +30,4 @@ $(document).ready(function() {
 		$(this).removeClass("effect_text_realiz");	
 	});
 });
+

@@ -18,8 +18,7 @@
   <script src="{% static "jquey/jquery-3.1.1.js" %}"></script>
   <script src="{% static "jquey/toole.js" %}"></script>
   <meta name="format-detection" content="telephone=no">
-  <script src="https://use.fontawesome.com/116e10d08c.js"></script>
-  
+  <script src="https://use.fontawesome.com/116e10d08c.js"></script>    
 </head>
 <body>
 
@@ -45,12 +44,17 @@
 			<p class="title_main fontsforweb_fontid_9785" id="title_size_2">NARZĘDZI</p>
 			<p class="title_main fontsforweb_fontid_9785" id="title_size_3">NA ZAMÓWIENIE</p>
 		</div>
-		<div id="main_img"></div>
+		<div id="main_img" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="shadow"></div>
+				<img class="item active img_slide" src="{% static "img/engine.jpg" %}" alt="rondo">
+				<img class="item img_slide" src="{% static "img/tech.jpg" %}" alt="kcpzpr">
+				<img class="item img_slide" src="{% static "img/technik.jpg" %}" alt="kino">
+				<img class="item img_slide" src="{% static "img/main_img.jpg" %}" alt="slide-4">			
+			</div>
+		</div>
 	</div>
 </div>
-
-
-
 <article class="art_holder hidden-xs col-sm-12">
 	<div class="art_inside">
 		{% block article %}
@@ -122,5 +126,15 @@
 	</div>
 </div>
 <!--End for Phone-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+	$('.carousel').carousel({
+		interval: 3000
+	})
+</script>
 </body>
+
 </html>
+
+

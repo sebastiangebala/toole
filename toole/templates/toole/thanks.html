@@ -6,14 +6,14 @@
 <a href="{% url 'o_firmie' %}"><p class="button_effect buttons fontsforweb_fontid_9785">O FIRMIE</p></a>
 <a href="{% url 'oferta' %}"><p class="button_effect buttons fontsforweb_fontid_9785">OFERTA</p></a>
 <a href="{% url 'realizacje' %}"><p class="button_effect buttons fontsforweb_fontid_9785">REALIZACJE</p></a>
-<a href="{% url 'kontakt' %}"><p class="button_effect buttons black fontsforweb_fontid_9785">KONTAKT</p></a>
+<a href="{% url 'kontakt' %}"><p class="button_effect buttons fontsforweb_fontid_9785">KONTAKT</p></a>
 {% endblock content %}
 
 {% block article %}
 	<div class="kontakt_1 fontsforweb_fontid_9785">
 		<p>KONTAKT</p>
 		<p class="kontakt_adres">91-357 Łódź, ul. Liściasta 17</br>tel. 507 012 53, 507 012 551</p>
-		<img class="kontakt_img" src="{% static "img/kolo.png" %}" alt="logo"/>
+		<img class="kontakt_img" src="{% static "img/kolo_ok.png" %}" alt="logo"/>
 	</div>
 	<div class="kontakt_2 fontsforweb_fontid_9785">
 		<p class="kontakt_title">NASZ ZESPÓŁ</p>
@@ -28,6 +28,11 @@
 	</div>
 	<div class="kontakt_2 fontsforweb_fontid_9785">	
 		<p id="thanks">Dziękujemy!</p>
+		<p id="thanks_twoja">
+			Twoja wiadomość została wysłana</br>
+			<img class="thanks_img" src="{% static "img/sroby.png" %}" alt="sroby"/>
+		</p>
+		
 	</div>
 {% endblock article %}
 
@@ -57,7 +62,12 @@
 	</div>
 	<div class="kontakt_phone fontsforweb_fontid_9785">
 		<p id="thanks">Dziękujemy!</p>
+		<p id="thanks_twoja">
+			Twoja wiadomość została wysłana</br>
+			<img class="thanks_img" src="{% static "img/sroby.png" %}" alt="sroby"/>
+		</p>
 	</div>
+	<a href="{% url 'base' %}"><i class="fa fa-reply fa-3x" aria-hidden="true"></i></a>
 {% endblock content_phone %}
 
 {% block footer_phone %}

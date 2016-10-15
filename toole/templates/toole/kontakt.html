@@ -28,6 +28,7 @@
 	</div>
 	<div class="kontakt_2 fontsforweb_fontid_9785">
 		<p class="kontakt_title">NAPISZ DO NAS</p>
+		<p class="kontakt_title_wszystkie">(wszystkie pola wymagane)</p>
 		<form id="action="" method="post">
 			{% csrf_token %}
 			<div class="contactList">
@@ -70,6 +71,7 @@
 	</div>
 	<div class="kontakt_phone fontsforweb_fontid_9785">
 		<p class="kontakt_title_phone">NAPISZ DO NAS</p>
+		<p class="kontakt_title_wszystkie">(wszystkie pola wymagane)</p>
 		
 		<form class="form_message" id="action="" method="post">
 			{% csrf_token %}
@@ -86,6 +88,7 @@
 		
 		
 	</div>
+	<a href="{% url 'base' %}"><i class="fa fa-reply fa-3x" aria-hidden="true"></i></a>
 {% endblock content_phone %}
 
 {% block footer_phone %}

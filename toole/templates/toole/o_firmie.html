@@ -11,7 +11,7 @@
 
 {% block article %}
 <div class="firma_img">
-	<img class="img-responsive" src="{% static "img/zielona.png" %}" alt="zielona"/>
+	<img class="img-responsive" src="{% static "img/zielona_ok.png" %}" alt="zielona"/>
 </div>
 <div class="firma_text fontsforweb_fontid_9785">
 <h3><b>O FIRMIE</b></h3></br>
@@ -34,7 +34,7 @@ Dysponujemy dostępem do laboratorium pomiarowego.
 <!--Phone-->
 {% block content_phone %}
 <div class="firma_img_phone col-xs-12">
-<img class="img-responsive" src="{% static "img/zielona.png" %}" alt="zielona"/>
+<img class="img-responsive" src="{% static "img/zielona_ok.png" %}" alt="zielona"/>
 </div>
 <div class="firma_text_phone fontsforweb_fontid_9785">
 <h3><b>O FIRMIE</b></h3></br>
@@ -45,6 +45,7 @@ w produkcji narzędzi i oprzyrządowania  wykorzystywanego w produkcji pierście
 Posiadamy wykwalifikowany personel inżynierów, konstruktorów oraz techników z bogatym doświadczeniem z za-kresu obsługi maszyn i urządzeń.
 Dysponujemy dostępem do laboratorium pomiarowego.
 </div>
+<a href="{% url 'base' %}"><i class="fa fa-reply fa-3x" aria-hidden="true"></i></a>
 {% endblock content_phone %}
 
 {% block footer_phone %}
