@@ -106,6 +106,7 @@ form {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: red}
 #message {padding-top: 20px; float: left; color: #161916;}
 .form-actions {float: left; margin-left: 50px; position: absolute; bottom: 40px; margin-left: -180px;}
 .message_width {width: 630px;}
+.top_width {width: 204px;}
 
 /*dziękujemy*/
 #thanks {text-align: center; font-size: 35px; margin-top: 50px;}
