@@ -48,7 +48,7 @@ footer {width: 100%; background: #FA0A17;}
 .end {width: 100%; padding-left: 0px; padding-right: 0px;}
 .end_inside {width: 1050px; margin: auto; background: #161916; text-align: center; padding-top: 20px; padding-bottom: 20px; color: #4A4A4A;}
 
-.base_img_1 {width: 300px; height: 465px; float: left; background: white; background-image: url('../img/niebieska.png'); background-size: 100% 100%; margin-left: 15px; margin-top: 15px}
+.base_img_1 {width: 300px; height: 465px; float: left; background: white; background-image: url('../img/niebieska_ok.png'); background-size: 100% 100%; margin-left: 15px; margin-top: 15px}
 .base_img_2 {position: relative; width: 225px; height: 225px; float: left; margin-left: 15px; margin-top: 15px}
 .base_img_3 {width: 465px; height: 225px; float: left; background-image: url('../img/mazak.jpg'); background-size: 100% 100%; margin-left: 15px; margin-top: 15px}
 .base_text {position: absolute; bottom: 0; width: 100%; height: 50px; background: #FA0A17;}
