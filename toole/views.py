@@ -31,9 +31,9 @@ def kontakt(request):
 			message = form.cleaned_data['message']
 			recipients = form.cleaned_data['from_email']
 			name = form.cleaned_data['name']
-			to_sender = ('Cześć {},'.format(name) + ' dziękujemy za wiadomość! Pozdrawiamy, Zespół Toole')
-			nowa = ('Masz nową wiadomość od {},'.format(from_email))
-			wiadomosc = ('Nowa wiadomość: {},'.format(message))
+			to_sender = ('Cześć {},'.format(name) + '\ndziękujemy za wiadomość! \nPozdrawiamy, \nZespół Toole')
+			nowa = ('Masz nową wiadomość od: {}'.format(name))
+			wiadomosc = ('Masz nową wiadomość od: {}'.format(name) + '\nE-mail: {}'.format(from_email) + '\nTytuł: {}'.format(subject) + '\nWiadomość: {}'.format(message))
 			try:
 				send_mail('Zespół Toole dziękuje za wiadomość', 
 				to_sender, 
