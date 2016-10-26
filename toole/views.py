@@ -31,16 +31,16 @@ def kontakt(request):
 			message = form.cleaned_data['message']
 			recipients = form.cleaned_data['from_email']
 			name = form.cleaned_data['name']
-			to_sender = ('Cześć {},'.format(name) + '\ndziękujemy za wiadomość! \nPozdrawiamy, \nZespół Toole')
+			to_sender = ('Cześć {},'.format(name) + '\n\ndziękujemy za wiadomość! \n\nPozdrawiamy, \n\nZespół Toole \n\nTa wiadomość została wygenerowana automatycznie. Prosimy nie odpowiadaj na nią')
 			nowa = ('Masz nową wiadomość od: {}'.format(name))
-			wiadomosc = ('Masz nową wiadomość od: {}'.format(name) + '\nE-mail: {}'.format(from_email) + '\nTytuł: {}'.format(subject) + '\nWiadomość: {}'.format(message))
+			wiadomosc = ('Masz nową wiadomość od: {}'.format(name) + '\n\nE-mail: {}'.format(from_email) + '\n\nTytuł: {}'.format(subject) + '\n\nWiadomość: {}'.format(message))
 			try:
 				send_mail('Zespół Toole dziękuje za wiadomość', 
 				to_sender, 
 				from_email, 
 				[recipients]
 				)
-				send_mail(nowa, wiadomosc, from_email, ['bastekforever@gmail.com'])
+				send_mail(nowa, wiadomosc, from_email, ['test@serwer1609421.home.pl'])
 			except BadHeaderError:
 				return HttpResponse('Invalid header found.')
 			return redirect('thanks')

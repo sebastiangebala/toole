@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'bastekforever@gmail.com'
+EMAIL_HOST_USER = 'toolewiadomosc@gmail.com'
 EMAIL_HOST_PASSWORD = 'vascodagama1497'
 
 # Application definition
