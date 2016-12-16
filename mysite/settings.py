@@ -25,7 +25,7 @@ SECRET_KEY = ')gpx-gks018ls-!h$))47!*5kp7so4%=*w!@onuihanwo-d-bo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['webapp-244958.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
