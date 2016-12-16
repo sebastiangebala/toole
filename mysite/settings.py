@@ -25,13 +25,13 @@ SECRET_KEY = ')gpx-gks018ls-!h$))47!*5kp7so4%=*w!@onuihanwo-d-bo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.toole.pl',]
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'toolewiadomosc@gmail.com'
-EMAIL_HOST_PASSWORD = 'vascodagama1497'
+EMAIL_HOST_PASSWORD = 'Kolumb1492'
 
 # Application definition
 
