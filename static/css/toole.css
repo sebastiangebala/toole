@@ -18,7 +18,7 @@ text-decoration: none;
 #top_page_2 {width: 1050px; height: 240px; margin: auto;}
 #logo {
 width: 250px; 
-height: 80px; 
+height: 70px; 
 float: left; 
 background-image: url('../img/logo.png');
 background-size: 100% 100%;
@@ -36,14 +36,14 @@ background-size: 100% 100%;
 .shadow {box-shadow: 100px 0px 120px 50px #161916 inset; position: absolute; width: 100%; height: 100%; border-bottom: 6px solid #FA0A17; z-index: 20}
 
 .strona {width: 200px; height: 35px; float: left; margin-top: 68px; position: relative; background-color: #FA0A17; border-right: 2px solid #161916; text-align: center; font-size: 17px; color: #161916; padding-top: 5px; z-index: 10;}
-.buttons {width: 150px; height: 35px; float: left; margin-top: 68px; position: relative; background-color: #FA0A17; border-right: 2px solid #161916; text-align: center; font-size: 17px; color: #161916; padding-top: 5px; z-index: 10;}
+.buttons {width: 120px; height: 35px; float: left; margin-top: 68px; position: relative; background-color: #FA0A17; border-right: 2px solid #161916; text-align: center; font-size: 17px; color: #161916; padding-top: 5px; z-index: 10;}
 .effect {background: #161916; color: white;}
 .black {background: #161916; color: white;}
 
 .art_holder {width: 100%; padding-left: 0px; padding-right: 0px;}
 .art_inside {width: 1050px; margin: auto; padding-bottom: 15px; background: #161916; display: table;}
 footer {width: 100%; background: #FA0A17;}
-.footer_inside {width: 1050px; margin: auto; font-size: 18px; padding-top: 20px; padding-bottom: 20px; padding-left: 15px; color: black;}
+.footer_inside {width: 1050px; margin: auto; font-size: 18px; padding-top: 20px; padding-bottom: 20px; padding-left: 15px; padding-right: 15px; color: black; text-align: justify}
 .footer_font {text-align: center; font-size: 25px;}
 .end {width: 100%; padding-left: 0px; padding-right: 0px;}
 .end_inside {width: 1050px; margin: auto; background: #161916; text-align: center; padding-top: 20px; padding-bottom: 20px; color: #4A4A4A;}
@@ -60,14 +60,20 @@ footer {width: 100%; background: #FA0A17;}
 .img_base_4 {background-image: url('../img/filtr.jpg'); background-size: 100% 100%;}
 
 /*o firmie*/
-.firma_img {float: left; width: 500px;}
-.firma_text {color: white; font-size: 18px; padding: 20px;}
+.firma_img {float: left; width: 525px; padding-top: 20px}
+.firma_text {color: white; font-size: 18px; padding: 20px; text-align: justify}
+.firma_text a:link {text-decoration: none; color: white}
+.firma_text a:visited {text-decoration: none; color: white}
+.firma_text a:hover {text-decoration: none; color: white}
+.firma_text h3 {float: right; width: 50%}
+#firma_text_right {float: right; width: 50%}
+#firma_text_full {float: right; width: 100%}
 
 /*oferta*/
 .oferta_empty {float: left; width: 250px; height: 700px; background: #161916;}
-.oferta_holder {float: left; width: 800px; color: white; font-size: 15px; height: 700px; background: #161916;}
+.oferta_holder {float: left; width: 600px; color: white; font-size: 15px; background: #161916; text-align: justify}
 .first_letter {display: inline; background: #FA0A17; padding-left: 40px; text-align: right; line-height: 40px;}
-.oferta_text {display: inline; line-height: 40px;}
+.oferta_text {display: inline; line-height: 40px}
 
 /*realizacje*/
 .base_img_2_realiz {position: relative; width: 244px; height: 244px; float: left; margin-left: 15px; margin-top: 15px;}
@@ -88,31 +94,34 @@ form {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: red}
 .btn-default {color: black}
 
 /*product_detail*/
-.edit {margin-left: 15px; margin-top: 15px; color: yellow}
+.edit_produkt {margin-left: 15px; margin-top: 15px; color: yellow}
+
+/*partner*/
+.edit_pen {margin-top: 25px; color: yellow; position: relative; float: left; margin-left: -100px !important; text-shadow: 5px 5px 5px #0c0606}
+.edit_trash {margin-top: 25px; color: yellow; position: relative; float: left; margin-left: -50px !important; text-shadow: 5px 5px 5px #0c0606}
 
 /*kontakt*/
-.kontakt_1 {width: 350px; float: left; padding: 20px; color: white; font-size: 25px; font-weight: bold;}
-.kontakt_2 {width: 700px; float: left; padding: 20px; color: white; font-size: 15px; font-weight: bold;}
+#kontakt_left_holder {width: 350px; height: 100%; position: absolute}
+#kontakt_right_holder {width: 700px; float: right; padding: 20px; color: white; font-size: 25px; font-weight: bold}
+.kontakt_1 {width: 350px; padding: 20px; color: white; font-size: 25px; font-weight: bold;}
+.contact {font-size: 16px}
 .kontakt_title {text-align: center; font-size: 25px; padding-bottom: 0px;}
 .kontakt_title_wszystkie {text-align: center; font-size: 15px; color: #FA0A17}
-.kontakt_dane_1 {float: left; text-align: center; padding-left: 50px;}
-.kontakt_dane_2 {float: right; text-align: center; padding-right: 50px;}
-.kontakt_adres {font-size: 15px; float: right;}
+.kontakt_dane_1 {text-align: center; padding-left: 50px;}
+.kontakt_adres {font-size: 15px; padding-left: 15%; margin-top: 25px}
 .kontakt_kto {border-bottom: 2px solid red; margin-bottom: 10px;}
-.kontakt_img {width: 450px; margin-left: -150px !important;}
 #email {float: left; padding-left: 0px; color: #161916;}
 #subject {float: left; padding-left: 10px; color: #161916;}
 #name {float: left; padding-left: 10px; color: #161916;}
 #message {padding-top: 20px; float: left; color: #161916;}
-.form-actions {float: left; margin-left: 50px; position: absolute; bottom: 40px; margin-left: -180px;}
+.form-actions {font-size: 16px}
 .message_width {width: 630px;}
 .top_width {width: 204px;}
 
 /*dziękujemy*/
-#thanks {text-align: center; font-size: 35px; margin-top: 50px;}
+#thanks {text-align: center; font-size: 35px; margin-top: 50px; color: white}
 #thanks_twoja {text-align: center; font-size: 15px; margin-top: 15px; width: 100%; color: #FA0A17}
 .thanks_img {width: 200px}
-
 
 /*small Desktop*/
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -120,7 +129,7 @@ form {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: red}
 .main_stuff_2 {height: 200px;}
 #top_page_1 {width: 900px; height: 60px;}
 #top_page_2 {width: 900px; height: 200px;}
-#logo {width: 200px; height: 60px;}
+#logo {width: 200px; height: 56px;}
 #empty {width: 700px; height: 60px;}
 .red_string {height: 35px; top: 72px;}
 #title {width: 200px; height: 200px;}
@@ -128,8 +137,8 @@ form {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: red}
 #title_size_2 {font-size: 40px; line-height: 40px;}
 #title_size_3 {font-size: 22px; line-height: 22px;}
 #main_img {width: 700px; height: 173px; margin-top: 27px}
-.strona {width: 180px; height: 35px; margin-top: 52px; font-size: 17px; padding-top: 5px;}
-.buttons {width: 130px; height: 35px; margin-top: 52px; font-size: 17px; padding-top: 5px;}
+.strona {width: 180px; height: 35px; margin-top: 52px; font-size: 15px; padding-top: 6px;}
+.buttons {width: 104px; height: 35px; margin-top: 52px; font-size: 15px; padding-top: 6px;}
 .art_inside {width: 900px;}
 .footer_inside {width: 900px;}
 .end_inside {width: 900px;}
@@ -137,14 +146,20 @@ form {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: red}
 .base_img_2 {width: 189px; height: 189px;}
 .base_img_3 {width: 393px; height: 189px;}
 .oferta_empty {width: 200px;}
-.oferta_holder {width: 700px;}
+.oferta_holder {width: 550px;}
 .base_img_2_realiz_small {position: relative; width: 206px; height: 206px; float: left; margin-left: 15px; margin-top: 15px;}
 .base_text_realiz p {font-size: 20px;}
 .kontakt_1 {width: 300px;}
-.kontakt_2 {width: 600px;}
+#kontakt_left_holder {width: 300px}
+#kontakt_right_holder {width: 600px}
 .top_width {width: 170px;}
 .message_width {width: 530px;}
 .img_slide {width: 700px; height: 173px !important;}
+.firma_img {width: 450px;}
+
+
+
+
 }
 /*iPad*/
 @media (min-width: 768px) and (max-width: 992px) {
@@ -152,7 +167,7 @@ form {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: red}
 .main_stuff_2 {height: 180px;}
 #top_page_1 {width: 760px; height: 55px;}
 #top_page_2 {width: 760px; height: 180px;}
-#logo {width: 180px; height: 55px;}
+#logo {width: 180px; height: 50px;}
 #empty {width: 580px; height: 55px;}
 .red_string {height: 30px; top: 67px;}
 #title {width: 180px; height: 180px;}
@@ -160,8 +175,8 @@ form {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: red}
 #title_size_2 {font-size: 35px; line-height: 35px;}
 #title_size_3 {font-size: 20px; line-height: 20px;}
 #main_img {width: 580px; height: 158px; margin-top: 22px}
-.strona {width: 160px; height: 30px; margin-top: 47px; font-size: 15px; padding-top: 4px;}
-.buttons {width: 105px; height: 30px; margin-top: 47px; font-size: 15px; padding-top: 4px;}
+.strona {width: 160px; height: 30px; margin-top: 47px; font-size: 13px; padding-top: 5px;}
+.buttons {width: 84px; height: 30px; margin-top: 47px; font-size: 13px; padding-top: 5px;}
 .art_inside {width: 760px;}
 .footer_inside {width: 760px;}
 .end_inside {width: 760px;}
@@ -171,18 +186,19 @@ form {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: red}
 .firma_img {width: 380px;}
 .firma_text {font-size: 15px; padding: 15px;}
 .oferta_empty {width: 180px; height: 800px;}
-.oferta_holder {width: 580px; height: 800px;}
+.oferta_holder {width: 500px;}
 .base_img_2_realiz_small {position: relative; width: 172px; height: 172px; float: left; margin-left: 15px; margin-top: 15px;}
 .base_text_realiz p {font-size: 18px;}
-.kontakt_1 {width: 250px; padding: 10px; font-size: 20px;}
-.kontakt_2 {width: 510px; padding: 10px; font-size: 12px;}
+#kontakt_left_holder {width: 250px}
+#kontakt_right_holder {width: 510px}
+.kontakt_1 {padding: 10px; font-size: 20px;}
+.contact {font-size: 15px}
 .kontakt_title {font-size: 20px; padding-bottom: 20px;}
 .kontakt_dane_1 {padding-left: 30px;}
 .kontakt_dane_2 {padding-right: 30px;}
-.kontakt_adres {font-size: 12px;}
+.kontakt_adres {font-size: 12px; width: 250px}
 .top_width {width: 148px;}
-.message_width {width: 462px;}
-.form-actions {margin-left: -150px;}
+.message_width {width: 470px;}
 .img_slide {width: 580px; height: 158px !important;}
 }
 /*iPhone*/
@@ -205,7 +221,7 @@ footer {background: #FA0A17;}
 .base_text_phone {position:absolute; bottom: 0; height: 50px; background: #FA0A17; width: 80%; padding-left: 10%; padding-right: 10%; border-radius: 0 0 7pt 7pt}
 .base_text_phone p {font-size: 25px; font-weight: bold; color: black; padding-right: 5px; padding-top: 5px; text-align: right;}
 .phone_img {margin-left: 0px; padding-left: 0px; padding-right: 0px; width: 100%; border-radius: 7pt}
-.firma_text_phone {color: white; font-size: 15px; padding: 15px;}
+.firma_text_phone {color: white; font-size: 15px; padding: 15px; text-align: justify}
 .firma_img_phone {padding-bottom: 30px;}
 .oferta_holder_phone {width: 100%; height: 100%; float: left; color: white; font-size: 15px; background: #161916;}
 .first_letter_phone {display: inline; background: #FA0A17; padding-left: 40px; text-align: right; line-height: 40px;}

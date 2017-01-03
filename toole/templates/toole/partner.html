@@ -1,0 +1,83 @@
+{% extends 'toole/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<a href="{% url 'base' %}"><p class="button_effect strona fontsforweb_fontid_9785">STRONA GŁÓWNA</p></a>
+<a href="{% url 'o_firmie' %}"><p class="button_effect buttons fontsforweb_fontid_9785">O FIRMIE</p></a>
+<a href="{% url 'oferta' %}"><p class="button_effect buttons fontsforweb_fontid_9785">OFERTA</p></a>
+<a href="{% url 'realizacje' %}"><p class="button_effect buttons fontsforweb_fontid_9785">REALIZACJE</p></a>
+<a href="{% url 'partner' %}"><p class="button_effect buttons black fontsforweb_fontid_9785">PARTNERZY</p></a>
+<a href="{% url 'kontakt' %}"><p class="button_effect buttons fontsforweb_fontid_9785">KONTAKT</p></a>
+{% endblock content %}
+
+{% block article %}
+
+	{% if user.is_authenticated %}
+		<a href="{% url 'partner_new' %}"><i class="fa fa-pencil fa-3x" aria-hidden="true"></i></a>
+	{% endif %}
+
+
+	{% for partner in partners %}
+			<a href="http://{{ partner.link }}/" target="_blank">
+
+				<div class="base_img_2_realiz hidden-sm hidden-md">
+					{% if partner.image %}
+					<img class="img_realiz" src="{{ partner.image.url }}"/>					
+					{% endif %}
+					<div class="base_text_realiz fontsforweb_fontid_9785"><p>{{ partner.title }}</p></div>
+				</div>
+				{% if user.is_authenticated %}
+				<a class="hidden-sm hidden-md" href="{% url 'partner_edit' pk=partner.pk %}"><i class="fa fa-pencil-square-o fa-3x edit_pen" aria-hidden="true"></i></a>
+				<a class="hidden-sm hidden-md" href="{% url 'partner_remove' pk=partner.pk %}"><i class="fa fa-trash fa-3x edit_trash" aria-hidden="true"></i></a>
+				{% endif %}
+				
+			</a>
+			
+			
+			
+			<a href="http://{{ partner.link }}/" target="_blank">
+				<div class="base_img_2_realiz_small hidden-lg">
+					{% if partner.image %}
+					<img class="img_realiz" src="{{ partner.image.url }}"/>
+					{% endif %}
+					<div class="base_text_realiz fontsforweb_fontid_9785"><p>{{ partner.title }}</p></div>
+				</div>
+				
+				{% if user.is_authenticated %}
+				<a class="hidden-lg" href="{% url 'partner_edit' pk=partner.pk %}"><i class="fa fa-pencil-square-o fa-3x edit_pen" aria-hidden="true"></i></a>
+				<a class="hidden-lg" href="{% url 'partner_remove' pk=partner.pk %}"><i class="fa fa-trash fa-3x edit_trash" aria-hidden="true"></i></a>
+				{% endif %}
+				
+			</a>	
+	{% endfor %}
+
+
+{% endblock article %}
+
+{% block footer %}
+	<div class="footer_inside footer_font fontsforweb_fontid_9785">
+		PROFESJONALNE NARZĘDZIA DOSTOSOWANE DO TWOICH POTRZEB
+	</div>
+{% endblock footer %}
+
+<!--Phone-->
+{% block content_phone %}
+	{% for partner in partners %}
+			<a href="http://{{ partner.link }}/" target="_blank">
+				<div class="base_img_2_realiz_phone col-xs-12">
+					{% if partner.image %}
+					<img class="img_realiz_phone" src="{{ partner.image.url }}"/>
+					{% endif %}
+					<div class="base_text_realiz_phone fontsforweb_fontid_9785"><p>{{ partner.title }}</p></div>
+				</div>
+			</a>
+	{% endfor %}
+	<a href="{% url 'base' %}"><i class="fa fa-reply fa-3x" aria-hidden="true"></i></a>
+{% endblock content_phone %}
+
+{% block footer_phone %}
+	<div class="footer_inside_phone footer_font fontsforweb_fontid_9785">
+		PROFESJONALNE NARZĘDZIA DOSTOSOWANE DO TWOICH POTRZEB
+	</div>
+{% endblock footer_phone %}
+<!--End for Phone-->

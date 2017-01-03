@@ -12,16 +12,13 @@
 
 {% block article %}
 
-	<div class="fontsforweb_fontid_9785">	
-		<p id="thanks">Dziękujemy!</p>
-		<p id="thanks_twoja">
-			Twoja wiadomość została wysłana</br>
-			<img class="thanks_img" src="{% static "img/sroby.png" %}" alt="sroby"/>
-		</p>
-		
-	</div>
-{% endblock article %}
+<h1 class="fontsforweb_fontid_9785">Nowy Partner</h1>
+    <form class="fontsforweb_fontid_9785" method="POST" enctype='multipart/form-data'>{% csrf_token %}
+        {{ form.as_p }}
+        <button class="fontsforweb_fontid_9785 save btn btn-default" type="submit">Zapisz i dodaj</button>
+    </form>
 
+{% endblock article %}
 
 {% block footer %}
 	<div class="footer_inside footer_font fontsforweb_fontid_9785">
@@ -31,14 +28,13 @@
 
 <!--Phone-->
 {% block content_phone %}
-	<div class="kontakt_phone fontsforweb_fontid_9785">
-		<p id="thanks">Dziękujemy!</p>
-		<p id="thanks_twoja">
-			Twoja wiadomość została wysłana</br>
-			<img class="thanks_img" src="{% static "img/sroby.png" %}" alt="sroby"/>
-		</p>
-	</div>
-	<a href="{% url 'base' %}"><i class="fa fa-reply fa-3x" aria-hidden="true"></i></a>
+
+<h1 class="fontsforweb_fontid_9785">Nowy Partner</h1>
+    <form class="fontsforweb_fontid_9785" method="POST" enctype='multipart/form-data'>{% csrf_token %}
+        {{ form.as_p }}
+        <button class="fontsforweb_fontid_9785 save btn btn-default" type="submit">Zapisz i dodaj</button>
+    </form>
+    <a href="{% url 'base' %}"><i class="fa fa-reply fa-3x" aria-hidden="true"></i></a>
 {% endblock content_phone %}
 
 {% block footer_phone %}

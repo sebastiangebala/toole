@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
-from .models import Produkt
+from .models import Produkt, Partner
 from django.shortcuts import render, get_object_or_404
-from .forms import ProduktForm, ContactForm
+from .forms import ProduktForm, PartnerForm, ContactForm
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.conf import settings
@@ -14,12 +14,18 @@ def o_firmie(request):
     return render(request, 'toole/o_firmie.html', {})
 def oferta(request):
     return render(request, 'toole/oferta.html', {})
+def partner(request):
+	partners = Partner.objects.all()
+	return render(request, 'toole/partner.html', {'partners': partners})
 def realizacje(request):
 	produkts = Produkt.objects.all()
 	return render(request, 'toole/realizacje.html', {'produkts': produkts})
 def produkt_detail(request, pk):
 	produkt = get_object_or_404(Produkt, pk=pk)
 	return render(request, 'toole/produkt_detail.html', {'produkt': produkt})
+def partner_detail(request, pk):
+	partner = get_object_or_404(Partner, pk=pk)
+	return render(request, 'toole/partner_detail.html', {'partner': partner})
 def kontakt(request):
 	if request.method == 'GET':
 		form = ContactForm()
@@ -40,7 +46,7 @@ def kontakt(request):
 				from_email, 
 				[recipients]
 				)
-				send_mail(nowa, wiadomosc, from_email, ['test@serwer1609421.home.pl'])
+				send_mail(nowa, wiadomosc, from_email, ['test@toole.pl'])
 			except BadHeaderError:
 				return HttpResponse('Invalid header found.')
 			return redirect('thanks')
@@ -75,3 +81,30 @@ def produkt_remove(request, pk):
     produkt.delete()
     return redirect('realizacje')
 
+
+
+def partner_new(request):
+	if request.method == "POST":
+		form = PartnerForm(request.POST or None, request.FILES or None)
+		if form.is_valid():
+			partner = form.save(commit=False)
+			partner.save()
+			return redirect('partner_detail', pk=partner.pk)
+	else:
+		form = PartnerForm()
+	return render(request, 'toole/partner_new.html', {'form': form})
+def partner_edit(request, pk):
+	partner = get_object_or_404(Partner, pk=pk)
+	if request.method == "POST":
+		form = PartnerForm(request.POST or None, request.FILES or None, instance=partner)
+		if form.is_valid():
+			partner = form.save(commit=False)
+			partner.save()
+			return redirect('partner_detail', pk=partner.pk)
+	else:
+		form = PartnerForm(instance=partner)
+	return render(request, 'toole/partner_new.html', {'form': form})
+def partner_remove(request, pk):
+	partner = get_object_or_404(Partner, pk=pk)
+	partner.delete()
+	return redirect('partner')

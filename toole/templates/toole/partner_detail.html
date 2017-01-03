@@ -11,17 +11,17 @@
 {% endblock content %}
 
 {% block article %}
+		{% if user.is_authenticated %}
+		<a href="{% url 'partner_edit' pk=partner.pk %}"><i class="fa fa-pencil-square-o fa-3x edit_produkt" aria-hidden="true"></i></a>
+		<a href="{% url 'partner_remove' pk=partner.pk %}"><i class="fa fa-trash fa-3x edit_produkt" aria-hidden="true"></i></a>
+		{% endif %}
+		{% if partner.image %}
+		<img class="img_detail" src="{{ partner.image.url }}"/>
+		{% endif %}
+		<h1 class="title_detail fontsforweb_fontid_9785">{{ partner.title }}</h1>
+		<p class="text_detail fontsforweb_fontid_9785">{{ partner.link }}</p>
 
-	<div class="fontsforweb_fontid_9785">	
-		<p id="thanks">Dziękujemy!</p>
-		<p id="thanks_twoja">
-			Twoja wiadomość została wysłana</br>
-			<img class="thanks_img" src="{% static "img/sroby.png" %}" alt="sroby"/>
-		</p>
-		
-	</div>
 {% endblock article %}
-
 
 {% block footer %}
 	<div class="footer_inside footer_font fontsforweb_fontid_9785">
@@ -31,13 +31,11 @@
 
 <!--Phone-->
 {% block content_phone %}
-	<div class="kontakt_phone fontsforweb_fontid_9785">
-		<p id="thanks">Dziękujemy!</p>
-		<p id="thanks_twoja">
-			Twoja wiadomość została wysłana</br>
-			<img class="thanks_img" src="{% static "img/sroby.png" %}" alt="sroby"/>
-		</p>
-	</div>
+	{% if partner.image %}
+	<img class="img_detail_phone" src="{{ partner.image.url }}"/>
+	{% endif %}
+	<h1 class="title_detail_phone fontsforweb_fontid_9785">{{ partner.title }}</h1>
+	<p class="text_detail_phone fontsforweb_fontid_9785">{{ partner.link }}</p>
 	<a href="{% url 'base' %}"><i class="fa fa-reply fa-3x" aria-hidden="true"></i></a>
 {% endblock content_phone %}
 

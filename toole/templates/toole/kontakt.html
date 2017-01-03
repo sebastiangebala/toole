@@ -6,33 +6,39 @@
 <a href="{% url 'o_firmie' %}"><p class="button_effect buttons fontsforweb_fontid_9785">O FIRMIE</p></a>
 <a href="{% url 'oferta' %}"><p class="button_effect buttons fontsforweb_fontid_9785">OFERTA</p></a>
 <a href="{% url 'realizacje' %}"><p class="button_effect buttons fontsforweb_fontid_9785">REALIZACJE</p></a>
+<a href="{% url 'partner' %}"><p class="button_effect buttons fontsforweb_fontid_9785">PARTNERZY</p></a>
 <a href="{% url 'kontakt' %}"><p class="button_effect buttons black fontsforweb_fontid_9785">KONTAKT</p></a>
 {% endblock content %}
 
 {% block article %}
+	<div id="kontakt_left_holder">
+	
 	<div class="kontakt_1 fontsforweb_fontid_9785">
 		<p>KONTAKT</p>
-		<p class="kontakt_adres">91-357 Łódź, ul. Liściasta 17</br>tel. 507 012 53, 507 012 551</p>
-		<img class="kontakt_img" src="{% static "img/kolo_ok.png" %}" alt="logo"/>
+		<p class="kontakt_adres">TOOLE sp. z o.o. sp. k.</br>91-357 Łódź, ul. Liściasta 17</br>tel. 507 012 357, 507 012 551</p>
 	</div>
-	<div class="kontakt_2 fontsforweb_fontid_9785">
-		<p class="kontakt_title">NASZ ZESPÓŁ</p>
-		<div class="kontakt_dane_1">
+	
+	<div class="kontakt_1 fontsforweb_fontid_9785">
+		<p>NASZ ZESPÓŁ</p>
+		<div class="kontakt_adres kontakt_dane_1">
 			<div class="kontakt_kto">Paweł Filarczyk</div>
 			<p class="kontakt_detail">+48 507 012 357</br>pawel.filarczyk@toole.pl</p>
 		</div>
-		<div class="kontakt_dane_2">
+		<div class="kontakt_adres kontakt_dane_1">
 			<div class="kontakt_kto">Sebastian Wędzonka</div>
 			<p class="kontakt_detail">+48 507 012 551</br>sebastian.wedzonka@toole.pl</p>
 		</div>
 	</div>
-	<div class="kontakt_2 fontsforweb_fontid_9785">
+
+	</div>
+
+	<div id="kontakt_right_holder" class="fontsforweb_fontid_9785">
 		<p class="kontakt_title">NAPISZ DO NAS</p>
 		<p class="kontakt_title_wszystkie">(wszystkie pola wymagane)</p>
 		<form id="action="" method="post">
 			{% csrf_token %}
 			<div class="contactList">
-				<div id="email" class="contact">{{ form.from_email }}</div>
+				<div id="email" class="contact fontsforweb_fontid_9785">{{ form.from_email }}</div>
 				<div id="subject" class="contact">{{ form.subject }}</div>
 				<div id="name" class="contact">{{ form.name }}</div>
 				<div id="message" class="contact">{{ form.message }}</div>
@@ -41,8 +47,8 @@
 				<button type="submit">Wyślij wiadomość</button>
 			</div>
 		</form>
-		
 	</div>
+		
 {% endblock article %}
 
 
@@ -56,7 +62,7 @@
 {% block content_phone %}
 	<div class="col-xs-12 kontakt_phone fontsforweb_fontid_9785">
 		<p class="kontakt_title_phone">KONTAKT</p>
-		<p class="kontakt_adres_phone">91-357 Łódź, ul. Liściasta 17</br>tel. 507 012 53, 507 012 551</p>
+		<p class="kontakt_adres_phone">91-357 Łódź, ul. Liściasta 17</br>tel. 507 012 357, 507 012 551</p>
 	</div>
 	<div class="col-xs-12 kontakt_phone fontsforweb_fontid_9785">
 		<p class="kontakt_title_phone">NASZ ZESPÓŁ</p>
