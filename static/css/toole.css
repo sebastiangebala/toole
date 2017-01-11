@@ -101,8 +101,11 @@ form {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: red}
 .edit_produkt {margin-left: 15px; margin-top: 15px; color: yellow}
 
 /*partner*/
-.edit_pen {margin-top: 25px; color: yellow; position: relative; float: left; margin-left: -100px !important; text-shadow: 5px 5px 5px #0c0606}
-.edit_trash {margin-top: 25px; color: yellow; position: relative; float: left; margin-left: -50px !important; text-shadow: 5px 5px 5px #0c0606}
+.edit_pen {z-index: 101; margin-top: 25px; color: yellow; position: relative; float: left; margin-left: -100px !important; text-shadow: 5px 5px 5px #0c0606}
+.edit_trash {z-index: 101; margin-top: 25px; color: yellow; position: relative; float: left; margin-left: -50px !important; text-shadow: 5px 5px 5px #0c0606}
+
+/*kariera*/
+.firma_text_extra {float: right; width: 100%; color: white; font-size: 18px; padding: 20px}
 
 /*kontakt*/
 #kontakt_left_holder {width: 350px; height: 100%; position: absolute}
@@ -160,8 +163,6 @@ form {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: red}
 .message_width {width: 530px;}
 .img_slide {width: 700px; height: 173px !important;}
 .firma_img {width: 450px;}
-
-
 
 
 }
@@ -245,3 +246,4 @@ footer {background: #FA0A17;}
 .form_message {margin: 0px;}
 .form_actions_phone {margin-bottom: 20px;}
 .fa-reply {float: right; color: #FA0A17; margin-right: 10%; margin-bottom: 45px; margin-top: 45px}
+.firma_text_extra_phone {color: white; font-size: 15px; padding: 15px; text-align: justify}

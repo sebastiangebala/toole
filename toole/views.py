@@ -47,7 +47,7 @@ def kontakt(request):
 				from_email, 
 				[recipients]
 				)
-				send_mail(nowa, wiadomosc, from_email, ['test@toole.pl'])
+				send_mail(nowa, wiadomosc, from_email, ['kontakt@toole.pl'])
 			except BadHeaderError:
 				return HttpResponse('Invalid header found.')
 			return redirect('thanks')
