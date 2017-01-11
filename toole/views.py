@@ -7,13 +7,14 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.conf import settings
 
 
-
 def base(request):
     return render(request, 'toole/base.html', {})
 def o_firmie(request):
     return render(request, 'toole/o_firmie.html', {})
 def oferta(request):
     return render(request, 'toole/oferta.html', {})
+def kariera(request):
+    return render(request, 'toole/kariera.html', {})
 def partner(request):
 	partners = Partner.objects.all()
 	return render(request, 'toole/partner.html', {'partners': partners})

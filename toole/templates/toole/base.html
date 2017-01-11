@@ -26,14 +26,16 @@
 	<div id="top_page_1">
 		<a href="{% url 'base' %}"><div id="logo"></div></a>
 		<div id="empty">
+
 			{% block content %}
-			<a href="{% url 'base' %}"><p class="button_effect strona black fontsforweb_fontid_9785">STRONA GŁÓWNA</p></a>
 			<a href="{% url 'o_firmie' %}"><p class="button_effect buttons fontsforweb_fontid_9785">O FIRMIE</p></a>
 			<a href="{% url 'oferta' %}"><p class="button_effect buttons fontsforweb_fontid_9785">OFERTA</p></a>
 			<a href="{% url 'realizacje' %}"><p class="button_effect buttons fontsforweb_fontid_9785">REALIZACJE</p></a>
 			<a href="{% url 'partner' %}"><p class="button_effect buttons fontsforweb_fontid_9785">PARTNERZY</p></a>
+			<a href="{% url 'kariera' %}"><p class="button_effect buttons fontsforweb_fontid_9785">KARIERA</p></a>
 			<a href="{% url 'kontakt' %}"><p class="button_effect buttons fontsforweb_fontid_9785">KONTAKT</p></a>
 			{% endblock %}
+
 		</div>
 	</div>
 	<div class="red_string"></div>
@@ -61,17 +63,19 @@
 		{% block article %}
 			<div class="base_img_1 hidden-sm hidden-md"></div>
 			<a href="{% url 'o_firmie' %}"><div class="base_img_2 base_img_2_effect hidden-sm hidden-md img_base_1"><div class="base_text fontsforweb_fontid_9785"><p>O FIRMIE</p></div></div></a>
-			<div class="base_img_3 hidden-sm hidden-md"></div>
 			<a href="{% url 'oferta' %}"><div class="base_img_2 base_img_2_effect hidden-sm hidden-md img_base_2"><div class="base_text fontsforweb_fontid_9785"><p>OFERTA</p></div></div></a>
 			<a href="{% url 'realizacje' %}"><div class="base_img_2 base_img_2_effect hidden-sm hidden-md img_base_3"><div class="base_text fontsforweb_fontid_9785"><p>REALIZACJE</p></div></div></a>
-			<a href="{% url 'kontakt' %}"><div class="base_img_2 base_img_2_effect hidden-sm hidden-md img_base_4"><div class="base_text fontsforweb_fontid_9785"><p>KONTAKT</p></div></div></a>
+			<a href="{% url 'partner' %}"><div class="base_img_2 base_img_2_effect hidden-sm hidden-md img_base_4"><div class="base_text fontsforweb_fontid_9785"><p>PARTNERZY</p></div></div></a>
+			<a href="{% url 'kariera' %}"><div class="base_img_2 base_img_2_effect hidden-sm hidden-md img_base_5"><div class="base_text fontsforweb_fontid_9785"><p>KARIERA</p></div></div></a>
+			<a href="{% url 'kontakt' %}"><div class="base_img_2 base_img_2_effect hidden-sm hidden-md img_base_6"><div class="base_text fontsforweb_fontid_9785"><p>KONTAKT</p></div></div></a>
 		
 			<div class="base_img_1 hidden-lg"></div>
 			<a href="{% url 'o_firmie' %}"><div class="base_img_2 hidden-lg img_base_1"><div class="base_text fontsforweb_fontid_9785"><p>O FIRMIE</p></div></div></a>
-			<div class="base_img_3 hidden-lg "></div>
 			<a href="{% url 'oferta' %}"><div class="base_img_2 hidden-lg img_base_2"><div class="base_text fontsforweb_fontid_9785"><p>OFERTA</p></div></div></a>
 			<a href="{% url 'realizacje' %}"><div class="base_img_2 hidden-lg img_base_3"><div class="base_text fontsforweb_fontid_9785"><p>REALIZACJE</p></div></div></a>
-			<a href="{% url 'kontakt' %}"><div class="base_img_2 hidden-lg img_base_4"><div class="base_text fontsforweb_fontid_9785"><p>KONTAKT</p></div></div></a>
+			<a href="{% url 'partner' %}"><div class="base_img_2 hidden-lg img_base_4"><div class="base_text fontsforweb_fontid_9785"><p>PARTNERZY</p></div></div></a>
+			<a href="{% url 'kariera' %}"><div class="base_img_2 hidden-lg img_base_5"><div class="base_text fontsforweb_fontid_9785"><p>KARIERA</p></div></div></a>
+			<a href="{% url 'kontakt' %}"><div class="base_img_2 hidden-lg img_base_6"><div class="base_text fontsforweb_fontid_9785"><p>KONTAKT</p></div></div></a>
 		{% endblock %}
 	</div>
 </article>
@@ -108,7 +112,8 @@
 		<a href="{% url 'oferta' %}"><div class="base_img_2_phone col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/machine_2_phone.jpg" %}" alt="machine"/><div class="base_text_phone fontsforweb_fontid_9785"><p>OFERTA</p></div></div></a>
 		<a href="{% url 'realizacje' %}"><div class="base_img_2_phone col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/walec_phone.jpg" %}" alt="machine"/><div class="base_text_phone fontsforweb_fontid_9785"><p>REALIZACJE</p></div></div></a>
 		<a href="{% url 'partner' %}"><div class="base_img_2_phone col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/partner.jpg" %}" alt="partner"/><div class="base_text_phone fontsforweb_fontid_9785"><p>PARTNERZY</p></div></div></a>
-		<a href="{% url 'kontakt' %}"><div class="base_img_2_phone col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/filtr_phone.jpg" %}" alt="machine"/><div class="base_text_phone col-sx-12 fontsforweb_fontid_9785"><p>KONTAKT</p></div></div></a>		
+		<a href="{% url 'kariera' %}"><div class="base_img_2_phone col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/kariera.jpg" %}" alt="partner"/><div class="base_text_phone fontsforweb_fontid_9785"><p>KARIERA</p></div></div></a>
+		<a href="{% url 'kontakt' %}"><div class="base_img_2_phone col-xs-12"><img class="img-responsive phone_img col-xs-12" src="{% static "img/kontakt.jpg" %}" alt="machine"/><div class="base_text_phone col-sx-12 fontsforweb_fontid_9785"><p>KONTAKT</p></div></div></a>		
 		{% endblock %}
 	</div>
 </article>

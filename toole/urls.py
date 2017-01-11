@@ -7,6 +7,7 @@ urlpatterns = [
 	url(r'^oferta/$', views.oferta, name='oferta'),
 	url(r'^partner/$', views.partner, name='partner'),
 	url(r'^realizacje/$', views.realizacje, name='realizacje'),
+	url(r'^kariera/$', views.kariera, name='kariera'),
 	url(r'^kontakt/$', views.kontakt, name='kontakt'),
 	url(r'^produkt/(?P<pk>[0-9]+)/$', views.produkt_detail, name='produkt_detail'),
 	url(r'^produkt/new/$', views.produkt_new, name='produkt_new'),
