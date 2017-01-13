@@ -108,9 +108,11 @@ form {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: red}
 .firma_text_extra {float: right; width: 100%; color: white; font-size: 18px; padding: 20px}
 .kariera_wraper {width: 100%; display: inline-block; margin-top: 15px;}
 .kariera_inside {float: left;}
-.kariera_inside_i {color: #FA0A17; margin-left: 15px;}
-.kariera_inside p {padding-left: 15px; padding-top: 18px;}
+.kariera_inside_i {color: #FA0A17; margin-left: 15px; -webkit-transition-duration: 0.2s; transition-duration: 0.2s;}
+.kariera_inside p {padding-left: 15px; padding-top: 18px; color: white;}
 .small_icon_kariera {margin-top: 16px; color: yellow; margin-left: 15px;}
+.effect_kariera {-webkit-transition-duration: 0.2s; transition-duration: 0.2s;}
+.effect_kariera:hover {z-index:100; -webkit-transform: scale(1.1); -moz-transform: scale(1.1);}
 
 /*kontakt*/
 #kontakt_left_holder {width: 350px; height: 100%; position: absolute}

@@ -31,3 +31,13 @@ $(document).ready(function() {
 	});
 });
 
+$(document).ready(function() {
+	$('.kariera_inside_i').mouseenter(function() {
+		$(this).addClass("effect_kariera");
+	});
+});
+$(document).ready(function() {
+	$('.kariera_inside_i').mouseleave(function() {
+		$(this).removeClass("effect_kariera");	
+	});
+});
