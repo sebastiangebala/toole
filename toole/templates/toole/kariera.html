@@ -22,7 +22,28 @@ W związku z ciągłym rozwojem i stałym wzrostem sprzedaży poszukujemy do na
 </div>
 <div class="firma_text_extra fontsforweb_fontid_9785">
 <h3><b>AKTUALNE OFERTY</b></h3></br>
-<p id="firma_text_extra">oferta 1</p>
+
+{% if user.is_authenticated %}
+		<a href="{% url 'kariera_new' %}"><i class="fa fa-pencil fa-3x" aria-hidden="true"></i></a>
+{% endif %}
+
+	{% for kariera in karieras %}
+		<div class="kariera_wraper">		
+			<a class="kariera_inside" href="/image/{{ kariera.plik }}/">
+				<i class="kariera_inside_i fa fa-file-text fa-3x" aria-hidden="true"></i>
+			</a>
+			<div class="kariera_inside">
+				<p class="fontsforweb_fontid_9785">{{ kariera.stanowisko }}</p>
+			</div>
+			{% if user.is_authenticated %}
+			<a class="kariera_inside" href="{% url 'kariera_edit' pk=kariera.pk %}"><i class="small_icon_kariera fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a>
+			<a class="kariera_inside" href="{% url 'kariera_remove' pk=kariera.pk %}"><i class="small_icon_kariera fa fa-trash fa-2x" aria-hidden="true"></i></a>
+			{% endif %}
+		</div>
+	{% endfor %}
+
+
+
 </div>
 {% endblock article %}
 
@@ -46,7 +67,19 @@ Specjalizujemy się w obróbce metali skrawaniem (toczenie CNC, frezowanie, drą
 </div>
 <div class="firma_text_extra_phone fontsforweb_fontid_9785">
 <h3><b>AKTUALNE OFERTY</b></h3></br>
-oferta 1
+
+{% for kariera in karieras %}
+		<div class="kariera_wraper col-xs-12">
+			<a class="kariera_inside" href="/image/{{ kariera.plik }}/">
+				<i class="kariera_inside_i_phone fa fa-file-text fa-3x" aria-hidden="true"></i>
+			</a>
+			<div class="kariera_inside">
+				<p class="fontsforweb_fontid_9785">{{ kariera.stanowisko }}</p>
+			</div>
+		</div>
+{% endfor %}
+
+
 </div>
 <a href="{% url 'base' %}"><i class="fa fa-reply fa-3x" aria-hidden="true"></i></a>
 {% endblock content_phone %}

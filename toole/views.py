@@ -1,10 +1,10 @@
+import os
 from django.shortcuts import render, redirect
-from .models import Produkt, Partner
+from .models import Produkt, Partner, Kariera
 from django.shortcuts import render, get_object_or_404
-from .forms import ProduktForm, PartnerForm, ContactForm
+from .forms import ProduktForm, PartnerForm, ContactForm, KarieraForm
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
-from django.conf import settings
 
 
 def base(request):
@@ -14,7 +14,8 @@ def o_firmie(request):
 def oferta(request):
     return render(request, 'toole/oferta.html', {})
 def kariera(request):
-    return render(request, 'toole/kariera.html', {})
+	karieras = Kariera.objects.all()
+	return render(request, 'toole/kariera.html', {'karieras': karieras})
 def partner(request):
 	partners = Partner.objects.all()
 	return render(request, 'toole/partner.html', {'partners': partners})
@@ -27,6 +28,9 @@ def produkt_detail(request, pk):
 def partner_detail(request, pk):
 	partner = get_object_or_404(Partner, pk=pk)
 	return render(request, 'toole/partner_detail.html', {'partner': partner})
+def kariera_detail(request, pk):
+	kariera = get_object_or_404(Kariera, pk=pk)
+	return render(request, 'toole/kariera_detail.html', {'kariera': kariera})
 def kontakt(request):
 	if request.method == 'GET':
 		form = ContactForm()
@@ -109,3 +113,40 @@ def partner_remove(request, pk):
 	partner = get_object_or_404(Partner, pk=pk)
 	partner.delete()
 	return redirect('partner')
+
+
+
+def kariera_new(request):
+	if request.method == "POST":
+		form = KarieraForm(request.POST or None, request.FILES or None)
+		if form.is_valid():
+			kariera = form.save(commit=False)
+			kariera.save()
+			return redirect('kariera')
+	else:
+		form = KarieraForm()
+	return render(request, 'toole/kariera_new.html', {'form': form})
+def kariera_edit(request, pk):
+	kariera = get_object_or_404(Kariera, pk=pk)
+	if request.method == "POST":
+		form = KarieraForm(request.POST or None, request.FILES or None, instance=kariera)
+		if form.is_valid():
+			kariera = form.save(commit=False)
+			kariera.save()
+			return redirect('kariera')
+	else:
+		form = KarieraForm(instance=kariera)
+	return render(request, 'toole/kariera_new.html', {'form': form})
+def kariera_remove(request, pk):
+	kariera = get_object_or_404(Kariera, pk=pk)
+	kariera.delete()
+	return redirect('kariera')
+
+	    
+
+
+
+
+
+
+

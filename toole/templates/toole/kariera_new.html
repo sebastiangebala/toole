@@ -1,0 +1,45 @@
+{% extends 'toole/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<a href="{% url 'o_firmie' %}"><p class="button_effect buttons fontsforweb_fontid_9785">O FIRMIE</p></a>
+<a href="{% url 'oferta' %}"><p class="button_effect buttons fontsforweb_fontid_9785">OFERTA</p></a>
+<a href="{% url 'realizacje' %}"><p class="button_effect buttons fontsforweb_fontid_9785">REALIZACJE</p></a>
+<a href="{% url 'partner' %}"><p class="button_effect buttons fontsforweb_fontid_9785">PARTNERZY</p></a>
+<a href="{% url 'kariera' %}"><p class="button_effect buttons fontsforweb_fontid_9785">KARIERA</p></a>
+<a href="{% url 'kontakt' %}"><p class="button_effect buttons fontsforweb_fontid_9785">KONTAKT</p></a>
+{% endblock content %}
+
+{% block article %}
+
+<h1 class="fontsforweb_fontid_9785">Nowa Oferta</h1>
+    <form class="fontsforweb_fontid_9785" method="POST" enctype='multipart/form-data'>{% csrf_token %}
+        {{ form.as_p }}
+        <button class="fontsforweb_fontid_9785 save btn btn-default" type="submit">Zapisz i dodaj</button>
+    </form>
+
+{% endblock article %}
+
+{% block footer %}
+	<div class="footer_inside footer_font fontsforweb_fontid_9785">
+		PROFESJONALNE NARZĘDZIA DOSTOSOWANE DO TWOICH POTRZEB
+	</div>
+{% endblock footer %}
+
+<!--Phone-->
+{% block content_phone %}
+
+<h1 class="fontsforweb_fontid_9785">Nowa Oferta</h1>
+    <form class="fontsforweb_fontid_9785" method="POST" enctype='multipart/form-data'>{% csrf_token %}
+        {{ form.as_p }}
+        <button class="fontsforweb_fontid_9785 save btn btn-default" type="submit">Zapisz i dodaj</button>
+    </form>
+    <a href="{% url 'base' %}"><i class="fa fa-reply fa-3x" aria-hidden="true"></i></a>
+{% endblock content_phone %}
+
+{% block footer_phone %}
+	<div class="footer_inside_phone footer_font fontsforweb_fontid_9785">
+		PROFESJONALNE NARZĘDZIA DOSTOSOWANE DO TWOICH POTRZEB
+	</div>
+{% endblock footer_phone %}
+<!--End for Phone-->

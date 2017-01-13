@@ -106,6 +106,11 @@ form {float: left; margin-left: 15px; margin-top: 15px; width: 100%; color: red}
 
 /*kariera*/
 .firma_text_extra {float: right; width: 100%; color: white; font-size: 18px; padding: 20px}
+.kariera_wraper {width: 100%; display: inline-block; margin-top: 15px;}
+.kariera_inside {float: left;}
+.kariera_inside_i {color: #FA0A17; margin-left: 15px;}
+.kariera_inside p {padding-left: 15px; padding-top: 18px;}
+.small_icon_kariera {margin-top: 16px; color: yellow; margin-left: 15px;}
 
 /*kontakt*/
 #kontakt_left_holder {width: 350px; height: 100%; position: absolute}
@@ -247,3 +252,4 @@ footer {background: #FA0A17;}
 .form_actions_phone {margin-bottom: 20px;}
 .fa-reply {float: right; color: #FA0A17; margin-right: 10%; margin-bottom: 45px; margin-top: 45px}
 .firma_text_extra_phone {color: white; font-size: 15px; padding: 15px; text-align: justify}
+.kariera_inside_i_phone {color: #FA0A17;}

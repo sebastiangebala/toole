@@ -17,5 +17,9 @@ urlpatterns = [
 	url(r'^partner/(?P<pk>[0-9]+)/$', views.partner_detail, name='partner_detail'),
 	url(r'^partner/(?P<pk>[0-9]+)/edit/$', views.partner_edit, name='partner_edit'),
 	url(r'^partner/(?P<pk>\d+)/remove/$', views.partner_remove, name='partner_remove'),
+	url(r'^kariera/new/$', views.kariera_new, name='kariera_new'),
+	url(r'^kariera/(?P<pk>[0-9]+)/$', views.kariera_detail, name='kariera_detail'),
+	url(r'^kariera/(?P<pk>[0-9]+)/edit/$', views.kariera_edit, name='kariera_edit'),
+	url(r'^kariera/(?P<pk>\d+)/remove/$', views.kariera_remove, name='kariera_remove'),
 	url(r'^thanks/$', views.thanks, name='thanks'),
 ]

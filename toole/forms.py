@@ -1,5 +1,5 @@
 from django import forms
-from .models import Produkt, Partner
+from .models import Produkt, Partner, Kariera
 from django.forms import ModelForm, CharField, TextInput, extras
 
 class ProduktForm(forms.ModelForm):
@@ -19,3 +19,8 @@ class PartnerForm(forms.ModelForm):
 	class Meta:
 		model = Partner
 		fields = ('title', 'link', 'image')
+
+class KarieraForm(forms.ModelForm):
+	class Meta:
+		model = Kariera
+		fields = ('stanowisko', 'plik')
